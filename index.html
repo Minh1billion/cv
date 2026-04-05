@@ -336,7 +336,6 @@
           <span class="s-tag">Vite</span>
           <span class="s-tag">Tailwind CSS</span>
           <span class="s-tag">Zustand</span>
-          <span class="s-tag">Chart.js</span>
         </div>
       </div>
 
@@ -387,10 +386,11 @@
       <div class="profile-sub">AI / ML · Year 3 Student</div>
       <p class="profile-text">
         Third-year Software Engineering student at HCMUTE with hands-on experience in
-        ML, Deep Learning, and full-stack AI systems. Built <strong>DALreaDone</strong> - a SaaS
-        AI data analyst with a two-pass LLM pipeline on CSVs/Excel and interactive charts - and
-        <strong>Npixie</strong>, a RAG-powered chatbot with vector search and NPC persona routing.
-        Experienced with FastAPI, PyTorch, React/TypeScript, Docker, AWS S3, Qdrant, and Groq API.
+        ML, Deep Learning, and full-stack AI systems. Built <strong>DALreaDone</strong> — a full-stack
+        AI data analytics platform with an 8-step statistical profiler, LLM-powered review (Groq LLaMA 3.3-70b),
+        strategy-based preprocessing pipeline, live SSE cost tracking, and OAuth2 auth — and
+        <strong>Npixie</strong>, a RAG-powered chatbot with Qdrant vector search and 5 YAML-driven NPC personas.
+        Experienced with FastAPI, PyTorch, React/TypeScript, Docker, AWS S3, Redis, and Groq API.
       </p>
     </div>
 
@@ -425,22 +425,22 @@
         <!-- DALreaDone -->
         <div class="proj-card">
           <div class="proj-head">
-            <div class="proj-name">DALreaDone - AI Data Analyst SaaS</div>
+            <div class="proj-name">DALreaDone — AI Data Analytics Platform</div>
             <div class="proj-links">
               <a class="proj-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">↗ GitHub</a>
             </div>
           </div>
           <ul class="proj-bullets">
-            <li>Full-stack AI data analyst - upload CSV/Excel, get automated EDA (schema, univariate, correlations, distributions, data quality score), LLM-generated insights, and interactive charts. No code required.</li>
-            <li>Runs a <strong>statistical profiler pipeline</strong> as a background task (7 steps, polled 1–2 s), then a separate <strong>LLM review pass</strong> (llama-3.3-70b-versatile) returning structured JSON: severity-tagged issues, priority-tagged prep steps, and insight opportunities.</li>
-            <li><strong>Preprocessing pipeline</strong>: strategy-based fit/transform (missing, outlier, scaling, encoding), confirmed to S3 as a new file - immediately usable for a new EDA run.</li>
-            <li>Auth: JWT access token in memory + <strong>httpOnly refresh cookie</strong>, <strong>OAuth2</strong> (Google + GitHub). Frontend state via <strong>Zustand</strong>; charts via <strong>Chart.js</strong>. Files stored on <strong>AWS S3</strong>, tasks queued in <strong>Redis</strong>.</li>
+            <li>Full-stack AI data analytics platform — upload CSV / Excel / JSON / Parquet, get a fully automated <strong>8-step EDA pipeline</strong> (schema, missing values, univariate stats, datetime, correlations, distributions, quality score) running as a background task with live progress polling.</li>
+            <li>Separate <strong>LLM review pass</strong> (Groq <strong>llama-3.3-70b-versatile</strong>) returns a single structured JSON: domain inference, severity-tagged column issues, semantic type detection, column relationships, and keep/drop candidates — called once after EDA completes.</li>
+            <li><strong>Strategy-based preprocessing pipeline</strong>: composable fit/transform operations (drop, cast, missing imputation, outlier clipping, encoding, scaling, feature engineering). <strong>AI Suggest</strong> auto-generates a full pipeline from the EDA report via LLM; confirmed result saved to S3 as a new file, immediately usable for a new EDA run.</li>
+            <li><strong>Live LLM cost tracking</strong> via Server-Sent Events — token counts, USD cost, and latency per chain streamed to the frontend in real time, no polling needed. Auth: JWT in memory + httpOnly refresh cookie + <strong>OAuth2</strong> (Google, GitHub). Task state in <strong>Redis</strong>, files on <strong>AWS S3</strong>.</li>
           </ul>
           <div class="tag-wrap">
             <span class="tag">FastAPI</span><span class="tag">React + TypeScript</span><span class="tag">Vite</span>
-            <span class="tag">Tailwind CSS</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
-            <span class="tag">AWS S3</span><span class="tag">Groq API</span><span class="tag">LLaMA 3.3-70b</span>
-            <span class="tag">Chart.js</span><span class="tag">JWT / OAuth2</span><span class="tag">Zustand</span>
+            <span class="tag">Tailwind CSS</span><span class="tag">Zustand</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span><span class="tag">AWS S3</span><span class="tag">Groq API</span>
+            <span class="tag">LLaMA 3.3-70b</span><span class="tag">JWT / OAuth2</span>
             <span class="tag">Docker Compose</span>
           </div>
         </div>
@@ -448,7 +448,7 @@
         <!-- Npixie -->
         <div class="proj-card">
           <div class="proj-head">
-            <div class="proj-name">Npixie - RAG Chatbot for Pixelara Marketplace</div>
+            <div class="proj-name">Npixie — RAG Chatbot for Pixelara Marketplace</div>
             <div class="proj-links">
               <a class="proj-link" href="https://github.com/Minh1billion/npixie-master" target="_blank">↗ GitHub</a>
             </div>
@@ -456,8 +456,8 @@
           <ul class="proj-bullets">
             <li>RAG-powered chatbot for a fantasy game-asset marketplace. User messages are embedded, retrieved against a lore vector store, and answered in-character by one of <strong>5 NPC personas</strong> (Nara, Zolt, Lyra, Vexis, Echo) auto-detected by keyword routing.</li>
             <li>Ingests world lore documents into <strong>Qdrant</strong> (vector DB) using <strong>sentence-transformers/all-MiniLM-L6-v2</strong>; retrieves top-k chunks per query and passes them as RAG context to <strong>Groq LLaMA</strong> for generation.</li>
-            <li>Each NPC is a configurable <strong>YAML persona file</strong>; adding a new character requires only a new YAML + keyword entry - no code changes. Real asset-pack recommendations are fetched live from <strong>Supabase (PostgreSQL)</strong> and returned alongside the reply.</li>
-            <li>Deployed via <strong>Docker Compose</strong> (FastAPI + Qdrant); exposes `/chat`, `/health`, and admin CRUD endpoints with Swagger UI.</li>
+            <li>Each NPC is a configurable <strong>YAML persona file</strong>; adding a new character requires only a new YAML + keyword entry — no code changes. Real asset-pack recommendations fetched live from <strong>Supabase (PostgreSQL)</strong>.</li>
+            <li>Deployed via <strong>Docker Compose</strong> (FastAPI + Qdrant); exposes <code>/chat</code>, <code>/health</code>, and admin CRUD endpoints with Swagger UI.</li>
           </ul>
           <div class="tag-wrap">
             <span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">sentence-transformers</span>

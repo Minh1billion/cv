@@ -20,13 +20,15 @@ I'm a **third-year Software Engineering student** at Ho Chi Minh City University
 
 ## 🚀 Featured Projects
 
-### 🧬 [DALreaDone](https://github.com/Minh1billion/dalreadone) — AI Data Analyst SaaS
-> Upload a CSV/Excel file → get automated EDA, LLM insights, and interactive charts. No code required.
+### 📊 [DALreaDone](https://github.com/Minh1billion/dalreadone) — AI Data Analytics Platform
+> Upload a CSV / Excel / JSON / Parquet file → get automated statistical profiling, LLM-powered insights, and an interactive preprocessing pipeline. No code required.
 
-- **Two-pass LLM pipeline** (Groq LLaMA 3.3-70b): statistical profiler → structured review (issues, prep steps, opportunities)
-- **Preprocessing pipeline**: missing value imputation, outlier clipping, scaling, encoding — confirmed to AWS S3
-- **Auth**: JWT in-memory + httpOnly refresh cookie, OAuth2 (Google + GitHub)
-- **Stack**: `FastAPI` `React + TypeScript` `Zustand` `Chart.js` `PostgreSQL` `Redis` `AWS S3` `Docker Compose`
+- **8-step EDA pipeline** (pure Python, no LLM): schema profiling, missing values, univariate stats, datetime analysis, Pearson/Cramér's V correlations, distribution analysis, and a weighted data quality score — runs as a background task with live progress via polling
+- **LLM review pass** (Groq `llama-3.3-70b-versatile`): one structured JSON response per EDA run — domain inference, severity-tagged issues, semantic type detection, column relationships, keep/drop recommendations
+- **Strategy-based preprocessing pipeline**: composable fit/transform operations (drop, cast, missing imputation, outlier clipping, encoding, scaling, feature engineering) with AI Suggest that auto-generates a full pipeline from the EDA report
+- **Live LLM cost tracking** via Server-Sent Events — token counts, USD cost, and latency per chain streamed to the frontend in real time
+- **Auth**: JWT access token in memory + httpOnly refresh cookie, OAuth2 (Google + GitHub); files on **AWS S3**, task state in **Redis**
+- **Stack**: `FastAPI` `React + TypeScript` `Vite` `Tailwind CSS` `Zustand` `PostgreSQL` `Redis` `AWS S3` `Groq API` `Docker Compose`
 
 ---
 
