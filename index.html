@@ -334,9 +334,7 @@
     <div class="apply-block">
       <div class="apply-label">Seeking Internship Opportunities</div>
       <div class="apply-badges">
-        <span class="apply-badge">Software Engineer</span>
-        <span class="apply-badge">ML / AI Engineer</span>
-        <span class="apply-badge">Data Scientist</span>
+        <span class="apply-badge">AI / ML Engineer</span>
         <span class="apply-badge intern">📌 Open to Intern Roles</span>
       </div>
     </div>
@@ -348,7 +346,7 @@
           <span class="ci">☎</span> 098 532 4912
         </a>
         <a class="contact-row" href="/cdn-cgi/l/email-protection#6b060205035b5a595a59525952525c522b0c060a020745080406">
-          <span class="ci">✉</span> <span class="__cf_email__" data-cfemail="d2bfbbbcbae2e3e0e3e0ebe0ebebe5eb92b5bfb3bbbefcb1bdbf">[email&#160;protected]</span>
+          <span class="ci">✉</span> <span class="__cf_email__" data-cfemail="d2bfbbbcbae2e3e0e3e0ebe0ebebe5eb92b5bfb3bbbefcb1bdbf">minh01212929979@gmail.com</span>
         </a>
         <a class="contact-row" href="https://github.com/Minh1billion" target="_blank">
           <span class="ci">⌥</span> github.com/Minh1billion
@@ -372,7 +370,7 @@
           <span class="s-tag core">Python</span>
           <span class="s-tag core">PyTorch</span>
           <span class="s-tag core">Scikit-learn</span>
-          <span class="s-tag">HuggingFace</span>
+          <span class="s-tag core">HuggingFace</span>
           <span class="s-tag">LLaMA 3</span>
           <span class="s-tag">Groq API</span>
           <span class="s-tag">Pandas</span>
@@ -385,12 +383,12 @@
         <div class="sg-label">Software Engineering</div>
         <div class="tag-cloud">
           <span class="s-tag core">FastAPI</span>
-          <span class="s-tag core">React</span>
+          <span class="s-tag">React</span>
           <span class="s-tag">TypeScript</span>
           <span class="s-tag">Spring Boot</span>
-          <span class="s-tag">Tailwind CSS</span>
           <span class="s-tag">REST API</span>
           <span class="s-tag">JWT / OAuth2</span>
+          <span class="s-tag">SSE</span>
         </div>
       </div>
 
@@ -437,15 +435,15 @@
 
     <div class="profile-header">
       <div class="profile-name">Tran Quang Minh</div>
-      <div class="profile-sub">AI / ML · Year 3 Student</div>
+      <div class="profile-sub">AI / ML Engineer · Year 3 Student</div>
       <p class="profile-text">
         Third-year Software Engineering student at HCMUTE with hands-on experience building
-        end-to-end AI systems and full-stack web applications. Comfortable working across the
-        entire development lifecycle - from data pipelines and model integration to backend APIs
-        and responsive frontend interfaces. Experienced with LLM-powered features, RAG architectures,
-        vector databases, and real-time data processing. Passionate about applying ML and modern
-        software engineering practices to solve practical problems, and actively seeking an internship
-        opportunity to contribute to and grow within a professional team.
+        end-to-end AI systems and full-stack web applications. Skilled in training and deploying
+        ML models with PyTorch, building LLM-powered features with RAG architectures and
+        vector databases, and integrating AI services into production backends via FastAPI.
+        Experienced with the full ML lifecycle - from data preprocessing and model training
+        to REST API serving and real-time inference pipelines. Actively seeking an internship
+        opportunity to apply and grow these skills within a professional AI/ML team.
       </p>
     </div>
 
@@ -507,7 +505,7 @@
             </div>
           </div>
           <ul class="proj-bullets">
-            <li>RAG-powered chatbot with <strong>Qdrant</strong> vector search (sentence-transformers) + <strong>Groq LLaMA</strong> generation; answers grounded in ingested lore documents.</li>
+            <li>RAG-powered chatbot with <strong>Qdrant</strong> vector search (sentence-transformers) + <strong>Groq LLaMA 3.1-8b</strong> generation; answers grounded in ingested lore documents.</li>
             <li><strong>5 NPC personas</strong> auto-selected by keyword routing, each defined as a <strong>YAML config</strong> - adding a new character requires zero code changes.</li>
             <li>Live product recommendations from <strong>Supabase</strong>; deployed via <strong>Docker Compose</strong> with REST + Swagger UI.</li>
           </ul>
@@ -515,6 +513,26 @@
             <span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">sentence-transformers</span>
             <span class="tag">Groq API</span><span class="tag">LLaMA 3.1-8b</span><span class="tag">Supabase</span>
             <span class="tag">Docker Compose</span><span class="tag">RAG</span><span class="tag">Python</span>
+          </div>
+        </div>
+
+        <!-- Pixelism - ML angle -->
+        <div class="proj-card">
+          <div class="proj-head">
+            <div class="proj-name">Pixelism - Pixel Art Marketplace (ML Validation)</div>
+            <div class="proj-links">
+              <a class="proj-link" href="https://github.com/Minh1billion/pixelism" target="_blank">↗ GitHub</a>
+            </div>
+          </div>
+          <ul class="proj-bullets">
+            <li>Built and integrated a <strong>PyTorch image classifier</strong> served via FastAPI to validate sprite uploads - only real pixel art is accepted into the platform.</li>
+            <li>Model inference called <strong>asynchronously</strong> from the Spring Boot backend; validation result pushed live to the client via <strong>SSE</strong> without polling.</li>
+            <li>Full-stack marketplace previously deployed on <strong>AWS EC2</strong>; frontend on Next.js 15, storage via Cloudinary CDN, auth via JWT + OAuth2.</li>
+          </ul>
+          <div class="tag-wrap">
+            <span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">Python</span>
+            <span class="tag">Spring Boot</span><span class="tag">Next.js 15</span><span class="tag">SSE</span>
+            <span class="tag">Docker</span><span class="tag">AWS EC2</span>
           </div>
         </div>
  
