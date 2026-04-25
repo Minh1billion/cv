@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Tran Quang Minh - CV</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink:    #0f0f0f;
@@ -57,7 +57,7 @@
     padding: 52px 56px 56px;
   }
 
-  /* ── HEADER ── */
+  /* HEADER */
   .hdr {
     text-align: center;
     border-bottom: 2px solid #0f0f0f;
@@ -74,7 +74,6 @@
   }
   .hdr-role {
     font-family: 'EB Garamond', serif;
-    font-style: italic;
     font-size: 14.5px;
     color: #444;
     margin-bottom: 10px;
@@ -92,7 +91,7 @@
   .hdr-contact a:hover { color: #000; }
   .sep { color: #ccc; }
 
-  /* ── SECTION ── */
+  /* SECTION */
   .section { margin-bottom: 15px; }
   .sec-title {
     font-family: 'EB Garamond', serif;
@@ -106,17 +105,16 @@
     margin-bottom: 10px;
   }
 
-  /* ── SUMMARY ── */
+  /* SUMMARY */
   .summary-text {
     font-family: 'EB Garamond', serif;
     font-size: 13px;
     line-height: 1.75;
     color: var(--ink);
     text-align: justify;
-    font-style: italic;
   }
 
-  /* ── EDUCATION entry ── */
+  /* EDUCATION */
   .entry { margin-bottom: 10px; }
   .e-head {
     display: flex;
@@ -168,7 +166,20 @@
   }
   .e-bullets li strong { color: var(--ink); font-weight: 600; }
 
-  /* ── PROJECTS ── */
+  /* GPA badge */
+  .gpa-inline {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    padding: 1px 8px;
+    color: #333;
+    margin-left: 4px;
+  }
+
+  /* PROJECTS */
   .proj { margin-bottom: 12px; }
   .proj:last-child { margin-bottom: 0; }
   .p-head {
@@ -200,14 +211,22 @@
     color: #444;
     font-weight: 600;
     margin-bottom: 4px;
-    font-style: italic;
+  }
+  .p-stack {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .p-stack span {
+    font-weight: 600;
+    color: #333;
   }
   .p-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   .p-bullets li {
     font-size: 11.5px;
@@ -225,55 +244,31 @@
     top: 2px;
   }
   .p-bullets li strong { color: var(--ink); font-weight: 600; }
-  .p-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .p-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    padding: 2px 7px;
-    color: var(--muted);
-    background: var(--soft);
-    border: 1px solid var(--border);
-  }
 
-  /* ── SKILLS TWO-COL ── */
-  .skills-grid {
+  /* PERSONAL INFO */
+  .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px 32px;
+    gap: 4px 32px;
   }
-  .sk-row {
+  .info-row {
     display: flex;
     gap: 6px;
     font-size: 11.5px;
-    line-height: 1.5;
+    line-height: 1.55;
   }
-  .sk-label {
+  .info-label {
     font-weight: 600;
     color: var(--ink);
     white-space: nowrap;
-    min-width: 82px;
+    min-width: 72px;
     flex-shrink: 0;
   }
-  .sk-val { color: var(--muted); }
+  .info-val { color: var(--muted); }
+  .info-val a { color: var(--muted); text-decoration: none; }
+  .info-val a:hover { color: #000; }
 
-  /* ── GPA badge ── */
-  .gpa-inline {
-    display: inline-block;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    background: var(--soft);
-    border: 1px solid var(--border);
-    padding: 1px 8px;
-    color: #333;
-    margin-left: 4px;
-  }
-
-  /* ── TOEIC ── */
+  /* TOEIC */
   .toeic-row {
     display: flex;
     gap: 8px;
@@ -302,6 +297,27 @@
   }
   .tc-max { font-size: 9px; color: var(--light); }
 
+  /* SKILLS */
+  .sk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sk-row {
+    display: flex;
+    gap: 6px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .sk-label {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    min-width: 72px;
+    flex-shrink: 0;
+  }
+  .sk-val { color: var(--muted); }
+
   .proj-rule { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
 
   @media print {
@@ -316,7 +332,7 @@
 <body>
 
 <div class="export-bar">
-  <button class="export-btn" onclick="window.print()">↓ Export PDF</button>
+  <button class="export-btn" onclick="window.print()">Export PDF</button>
 </div>
 
 <div class="page">
@@ -324,17 +340,18 @@
   <!-- HEADER -->
   <div class="hdr">
     <div class="hdr-name">Tran Quang Minh</div>
-    <div class="hdr-role">AI / ML Engineer &ensp;·&ensp; Year 3 Student &ensp;·&ensp; Open to Internship</div>
-    <div class="hdr-contact">
-      <a href="tel:+84985324912">098 532 4912</a>
-      <span class="sep">|</span>
-      <a href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a>
-      <span class="sep">|</span>
-      <a href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a>
-      <span class="sep">|</span>
-      <a href="https://www.linkedin.com/in/minh-trần-quang-bb4433377/" target="_blank">linkedin.com/in/minh-trần-quang</a>
-      <span class="sep">|</span>
-      <span>Ho Chi Minh City, Vietnam</span>
+    <div class="hdr-role">AI / ML Engineer &nbsp; Year 3 Student &nbsp; Open to Internship</div>
+  </div>
+
+  <!-- PERSONAL INFORMATION -->
+  <div class="section">
+    <div class="sec-title">Personal Information</div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">Phone</span><span class="info-val"><a href="tel:+84985324912">098 532 4912</a></span></div>
+      <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span></div>
+      <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span></div>
+      <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/" target="_blank">linkedin.com/in/minh-tran-quang</a></span></div>
+      <div class="info-row"><span class="info-label">Location</span><span class="info-val">Ho Chi Minh City, Vietnam</span></div>
     </div>
   </div>
 
@@ -342,7 +359,7 @@
   <div class="section">
     <div class="sec-title">Profile</div>
     <p class="summary-text">
-      Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems - including LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation). Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
+      Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems including LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation). Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
     </p>
   </div>
 
@@ -352,9 +369,9 @@
     <div class="entry">
       <div class="e-head">
         <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 / 4.0</span></div>
-        <div class="e-date">September 2023 – Present</div>
+        <div class="e-date">September 2023 - Present</div>
       </div>
-      <div class="e-sub">Bachelor of Engineering · Information Technology · Major: Software Engineering</div>
+      <div class="e-sub">Bachelor of Engineering - Information Technology - Major: Software Engineering</div>
       <ul class="e-bullets">
         <li>Academic score: <strong>7.85 / 10</strong></li>
         <li>Served as <strong>team leader</strong> in Web Programming, Software Engineering, Machine Learning, and Digital Image Processing courses.</li>
@@ -366,116 +383,82 @@
   <div class="section">
     <div class="sec-title">Projects</div>
 
-    <!-- News Gathering Assistant -->
-    <div class="proj">
-      <div class="p-head">
-        <div class="p-title">News Gathering Assistant &mdash; Vietnamese Tech News Intelligence</div>
-        <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant" target="_blank">↗ github.com/Minh1billion/news-gathering-assistant</a>
-      </div>
-      <div class="p-sub">Technical Assessment Project &nbsp;·&nbsp; Full-stack · NLP · Data Pipeline</div>
-      <ul class="p-bullets">
-        <li>Built an end-to-end automated pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien, TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into PostgreSQL.</li>
-        <li>Preprocessing filters duplicates, scores relevance via <strong>semantic similarity</strong>, generates <strong>Vietnamese SBERT embeddings</strong> (<code>keepitreal/vietnamese-sbert</code>), and persists vectors to <strong>Qdrant</strong>.</li>
-        <li>Analysis engine runs <strong>K-means clustering</strong> with silhouette-score auto-tuning, combined <strong>TF-IDF + semantic keyword extraction</strong>, and topic-label assignment - producing structured weekly intelligence reports (JSON).</li>
-        <li><strong>React 18 dashboard</strong> renders executive summary, trending keywords, topic distribution, daily volume charts, cluster deep-dives, and highlighted articles with PDF export.</li>
-        <li>Fully containerized with <strong>Docker Compose</strong> (4 services: FastAPI, React/Nginx, PostgreSQL 15, Qdrant); health-check orchestration ensures correct startup order.</li>
-      </ul>
-      <div class="p-tags">
-        <span class="p-tag">Python 3.11</span><span class="p-tag">FastAPI</span><span class="p-tag">React 18</span>
-        <span class="p-tag">Sentence-Transformers</span><span class="p-tag">Qdrant</span><span class="p-tag">PostgreSQL</span>
-        <span class="p-tag">scikit-learn</span><span class="p-tag">BeautifulSoup4</span><span class="p-tag">Docker Compose</span>
-        <span class="p-tag">Recharts</span><span class="p-tag">Nginx</span>
-      </div>
-    </div>
-
-    <hr class="proj-rule"/>
-
     <!-- DALreaDone -->
     <div class="proj">
       <div class="p-head">
-        <div class="p-title">DALreaDone &mdash; AI Data Analytics Platform</div>
-        <a class="p-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">↗ github.com/Minh1billion/dalreadone</a>
+        <div class="p-title">DALreaDone - AI Data Analytics Platform</div>
+        <a class="p-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">github.com/Minh1billion/dalreadone</a>
       </div>
-      <div class="p-sub">Personal Project &nbsp;·&nbsp; Full-stack · LLM · Background Task Processing</div>
+      <div class="p-sub">Personal Project &nbsp; Full-stack, LLM, Background Task Processing</div>
+      <div class="p-stack"><span>Stack:</span> FastAPI, React, TypeScript, PostgreSQL, Redis, AWS S3, Groq API, LLaMA 3.3-70b, Docker Compose</div>
       <ul class="p-bullets">
-        <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation, quality scoring) running as a background task with live progress polling.</li>
+        <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation, quality scoring) running as background task with live progress polling.</li>
         <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON: domain inference, severity-tagged issues, semantic type detection, and keep/drop candidates.</li>
-        <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation, encoding, scaling, feature engineering); datasets saved to <strong>AWS S3</strong>, immediately available for re-analysis.</li>
-        <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT + httpOnly cookie + <strong>OAuth2</strong> (Google, GitHub); task state managed in <strong>Redis</strong>.</li>
+        <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation, encoding, scaling, feature engineering); datasets saved to AWS S3.</li>
+        <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT, httpOnly cookie, OAuth2 (Google, GitHub); task state in Redis.</li>
       </ul>
-      <div class="p-tags">
-        <span class="p-tag">FastAPI</span><span class="p-tag">React + TypeScript</span>
-        <span class="p-tag">PostgreSQL</span><span class="p-tag">Redis</span><span class="p-tag">AWS S3</span>
-        <span class="p-tag">Groq API</span><span class="p-tag">LLaMA 3.3-70b</span><span class="p-tag">Docker Compose</span>
-      </div>
     </div>
 
     <hr class="proj-rule"/>
 
-    <!-- Npixie -->
+    <!-- Minesweeper Hybrid RL Agent -->
     <div class="proj">
       <div class="p-head">
-        <div class="p-title">Npixie &mdash; RAG Chatbot for a Fantasy Marketplace</div>
-        <a class="p-link" href="https://github.com/Minh1billion/npixie-master" target="_blank">↗ github.com/Minh1billion/npixie-master</a>
+        <div class="p-title">Minesweeper Hybrid RL Agent - 45% Winrate Solver</div>
+        <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
       </div>
-      <div class="p-sub">Personal Project &nbsp;·&nbsp; RAG · LLM · Vector Search</div>
+      <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
+      <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
       <ul class="p-bullets">
-        <li><strong>RAG pipeline</strong>: embed lore documents → store in Qdrant → retrieve top-k chunks → generate via Groq LLaMA - producing lore-aware, contextually grounded responses.</li>
-        <li>Routes messages across <strong>5 NPC personas</strong> (Nara, Zolt, Lyra, Vexis, Echo) via keyword detection; each persona defined as a YAML file for easy extensibility.</li>
-        <li>Live <strong>asset-pack recommendations</strong> fetched from Supabase (PostgreSQL) based on chat context.</li>
+        <li>Hybrid AI agent combining <strong>constraint solver, Q-learning, and random fallback</strong> - achieving ~45% win rate on a 10x10 board with 15 mines.</li>
+        <li><strong>Frontier-based optimization</strong>: evaluates only boundary cells instead of the full grid; local state window reduces state space while preserving spatial patterns.</li>
+        <li><strong>Confidence-aware Q-learning</strong>: avoids low-certainty actions via Q-margin threshold; custom training loop without Gym with real-time debugging UI.</li>
       </ul>
-      <div class="p-tags">
-        <span class="p-tag">FastAPI</span><span class="p-tag">Qdrant</span><span class="p-tag">Sentence-Transformers</span>
-        <span class="p-tag">Groq API</span><span class="p-tag">LLaMA 3.3-70b</span><span class="p-tag">Supabase</span><span class="p-tag">Docker Compose</span>
-      </div>
     </div>
 
     <hr class="proj-rule"/>
 
-    <!-- Pixelism -->
+    <!-- News Gathering Assistant -->
     <div class="proj">
       <div class="p-head">
-        <div class="p-title">Pixelism &mdash; Pixel Art Marketplace</div>
-        <a class="p-link" href="https://github.com/Minh1billion/pixelism" target="_blank">↗ github.com/Minh1billion/pixelism</a>
+        <div class="p-title">News Gathering Assistant - Vietnamese Tech News Intelligence</div>
+        <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant" target="_blank">github.com/Minh1billion/news-gathering-assistant</a>
       </div>
-      <div class="p-sub">Personal Project &nbsp;·&nbsp; Full-stack · ML Validation · Cloud Deployment</div>
+      <div class="p-sub">Technical Assessment Project &nbsp; Full-stack, NLP, Data Pipeline</div>
+      <div class="p-stack"><span>Stack:</span> Python 3.11, FastAPI, React 18, Sentence-Transformers, Qdrant, PostgreSQL, scikit-learn, Docker Compose</div>
       <ul class="p-bullets">
-        <li>Full-stack marketplace for game developers; deployed on <strong>AWS EC2</strong> with Nginx as reverse proxy.</li>
-        <li>Spring Boot REST API with JWT auth, OAuth2 (Google &amp; GitHub), refresh token rotation, and OTP email verification via SMTP.</li>
-        <li>Real-time upload feedback via <strong>SSE</strong>; <strong>ML service</strong> (FastAPI + PyTorch) validates uploads to ensure only pixel art is accepted.</li>
-        <li>Frontend: <strong>Next.js 15</strong> App Router; images via <strong>Cloudinary</strong> CDN; session state in Redis.</li>
+        <li>End-to-end pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien, TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into PostgreSQL.</li>
+        <li><strong>Vietnamese SBERT embeddings</strong> stored in Qdrant for semantic deduplication and relevance scoring.</li>
+        <li><strong>K-means clustering</strong> with silhouette-score auto-tuning, TF-IDF keyword extraction, and topic labeling producing structured weekly JSON reports.</li>
+        <li><strong>React 18 dashboard</strong>: executive summary, trending keywords, topic distribution, daily volume charts, and PDF export.</li>
       </ul>
-      <div class="p-tags">
-        <span class="p-tag">Spring Boot</span><span class="p-tag">Java</span><span class="p-tag">Next.js 15</span>
-        <span class="p-tag">PostgreSQL</span><span class="p-tag">Redis</span><span class="p-tag">Cloudinary</span>
-        <span class="p-tag">JWT / OAuth2</span><span class="p-tag">Docker</span><span class="p-tag">AWS EC2</span>
-      </div>
     </div>
   </div>
 
   <!-- SKILLS -->
   <div class="section">
     <div class="sec-title">Technical Skills</div>
-    <div class="skills-grid">
-      <div class="sk-row"><span class="sk-label">Languages</span><span class="sk-val">Java, Python, TypeScript, JavaScript</span></div>
-      <div class="sk-row"><span class="sk-label">ML / NLP</span><span class="sk-val">PyTorch, scikit-learn, Sentence-Transformers, TF-IDF, OpenCV</span></div>
-      <div class="sk-row"><span class="sk-label">Backend</span><span class="sk-val">FastAPI, Spring Boot, REST API, JWT, OAuth2</span></div>
-      <div class="sk-row"><span class="sk-label">Databases</span><span class="sk-val">PostgreSQL, Redis, Qdrant (vector DB), Supabase</span></div>
-      <div class="sk-row"><span class="sk-label">Frontend</span><span class="sk-val">React, Next.js, TypeScript, Tailwind CSS, Vite</span></div>
-      <div class="sk-row"><span class="sk-label">Infra / DevOps</span><span class="sk-val">Docker, Docker Compose, Nginx, AWS EC2, AWS S3</span></div>
-      <div class="sk-row"><span class="sk-label">LLM / AI</span><span class="sk-val">Groq API, LLaMA, RAG pipelines, LangChain, HuggingFace</span></div>
-      <div class="sk-row"><span class="sk-label">Tools</span><span class="sk-val">Git, GitHub, Jupyter, BeautifulSoup4, Feedparser</span></div>
+    <div class="sk-list">
+      <div class="sk-row"><span class="sk-label">AI / ML</span><span class="sk-val">Python, PyTorch, scikit-learn, Sentence-Transformers, LangChain, HuggingFace, OpenCV</span></div>
+      <div class="sk-row"><span class="sk-label">Backend</span><span class="sk-val">FastAPI, Spring Boot, PostgreSQL, Redis, Qdrant, Docker, Nginx, AWS EC2, AWS S3</span></div>
+      <div class="sk-row"><span class="sk-label">Frontend</span><span class="sk-val">React, Next.js, TypeScript, Tailwind CSS</span></div>
+      <div class="sk-row"><span class="sk-label">Tools</span><span class="sk-val">Git, GitHub Actions, Jupyter, Docker Compose</span></div>
     </div>
   </div>
 
-  <!-- LANGUAGE -->
+  <!-- CERTIFICATIONS -->
   <div class="section">
-    <div class="sec-title">Language Proficiency - TOEIC</div>
-    <div class="toeic-row">
-      <div class="toeic-cell"><div class="tc-label">Reading</div><div class="tc-val">400</div><div class="tc-max">/ 495</div></div>
-      <div class="toeic-cell"><div class="tc-label">Listening</div><div class="tc-val">395</div><div class="tc-max">/ 495</div></div>
-      <div class="toeic-cell"><div class="tc-label">Writing</div><div class="tc-val">160</div><div class="tc-max">/ 200</div></div>
-      <div class="toeic-cell"><div class="tc-label">Speaking</div><div class="tc-val">140</div><div class="tc-max">/ 200</div></div>
+    <div class="sec-title">Certifications</div>
+    <div class="entry">
+      <div class="e-head">
+        <div class="e-org">TOEIC - Test of English for International Communication</div>
+      </div>
+      <ul class="e-bullets">
+        <li>Reading: <strong>400 / 495</strong></li>
+        <li>Listening: <strong>395 / 495</strong></li>
+        <li>Writing: <strong>160 / 200</strong></li>
+        <li>Speaking: <strong>140 / 200</strong></li>
+      </ul>
     </div>
   </div>
 
