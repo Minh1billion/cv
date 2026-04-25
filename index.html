@@ -1,528 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tran Quang Minh - CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --navy:      #1a2332;
-      --navy-mid:  #243044;
-      --navy-light:#2e3d56;
-      --accent:    #4a9eff;
-      --white:     #ffffff;
-      --off-white: #f4f6f9;
-      --text:      #2c2c2c;
-      --muted:     #666;
-      --light:     #999;
-      --border:    #e0e4ea;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      color: var(--text);
-      background: #d0d5de;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 24px 20px;
-      gap: 12px;
-    }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tran Quang Minh - CV</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:    #0f0f0f;
+    --rule:   #aaa;
+    --soft:   #f5f5f5;
+    --muted:  #555;
+    --light:  #888;
+    --border: #ddd;
+    --accent: #1a1a1a;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .export-bar {
-      width: 820px;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .export-btn {
-      background: var(--navy);
-      color: white;
-      border: none;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      transition: background 0.2s;
-    }
-    .export-btn:hover { background: var(--accent); }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: var(--ink);
+    background: #6b6b6b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 20px;
+    gap: 12px;
+  }
 
-    .page {
-      display: grid;
-      grid-template-columns: 228px 1fr;
-      width: 820px;
-      min-height: 1122px;
-      background: white;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.22);
-    }
+  .export-bar {
+    width: 760px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .export-btn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .export-btn:hover { opacity: 0.7; }
 
-    /* ══════════════ SIDEBAR ══════════════ */
-    .sidebar {
-      background: var(--navy);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px 36px;
-    }
-    .avatar-wrap {
-      width: 100px; height: 100px;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      overflow: hidden;
-      margin-bottom: 14px;
-      background: var(--navy-light);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .page {
+    width: 760px;
+    background: white;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.22);
+    padding: 52px 56px 56px;
+  }
 
-    .sidebar-name {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: white;
-      text-align: center;
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
+  /* HEADER */
+  .hdr {
+    text-align: center;
+    border-bottom: 2px solid #0f0f0f;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+  }
+  .hdr-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .hdr-role {
+    font-family: 'EB Garamond', serif;
+    font-size: 14.5px;
+    color: #444;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+  .hdr-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .hdr-contact a { color: var(--muted); text-decoration: none; }
+  .hdr-contact a:hover { color: #000; }
+  .sep { color: #ccc; }
 
-    /* ── Apply-For badge block ── */
-    .apply-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 24px;
-    }
-    .apply-label {
-      font-size: 8.5px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .apply-badges {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-    .apply-badge {
-      font-size: 9.5px;
-      font-weight: 600;
-      color: var(--accent);
-      background: rgba(74,158,255,0.12);
-      border: 1px solid rgba(74,158,255,0.35);
-      border-radius: 20px;
-      padding: 3px 10px;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
-    .apply-badge.intern {
-      font-size: 8.5px;
-      color: rgba(255,255,255,0.55);
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.15);
-      letter-spacing: 0.06em;
-    }
+  /* SECTION */
+  .section { margin-bottom: 15px; }
+  .sec-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f0f0f;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid #0f0f0f;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
 
-    .s-block { width: 100%; margin-bottom: 18px; }
-    .s-title {
-      font-family: 'Inter', sans-serif;
-      font-size: 10px; font-weight: 700;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      padding-bottom: 6px;
-      border-bottom: 1px solid rgba(74,158,255,0.4);
-      margin-bottom: 10px;
-    }
-    .contact-list { display: flex; flex-direction: column; gap: 7px; }
-    .contact-row {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 10.5px; color: rgba(255,255,255,0.82);
-      text-decoration: none; line-height: 1.4;
-      transition: color 0.2s;
-    }
-    .contact-row:hover { color: var(--accent); }
-    .ci {
-      width: 16px; height: 16px;
-      background: var(--navy-light);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 8px; flex-shrink: 0; margin-top: 1px;
-      color: var(--accent);
-    }
+  /* SUMMARY */
+  .summary-text {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink);
+    text-align: justify;
+  }
 
-    /* ── Skill stack groups ── */
-    .skill-group { margin-bottom: 12px; }
-    .skill-group:last-child { margin-bottom: 0; }
-    .sg-label {
-      font-size: 9px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.45);
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
-      margin-bottom: 5px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .sg-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(255,255,255,0.1);
-    }
-    .tag-cloud { display: flex; flex-wrap: wrap; gap: 5px; }
-    .s-tag {
-      font-size: 10px;
-      padding: 3px 8px;
-      border-radius: 3px;
-      background: var(--navy-light);
-      color: rgba(255,255,255,0.85);
-      border: 1px solid rgba(74,158,255,0.2);
-      line-height: 1.3;
-      font-weight: 400;
-    }
-    .s-tag.core {
-      background: rgba(74,158,255,0.18);
-      border-color: rgba(74,158,255,0.45);
-      color: #a8d4ff;
-      font-weight: 500;
-    }
+  /* EDUCATION */
+  .entry { margin-bottom: 10px; }
+  .e-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1px;
+  }
+  .e-org {
+    font-family: 'EB Garamond', serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .e-date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 10.5px;
+    color: var(--light);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .e-sub {
+    font-size: 11.5px;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .e-bullets {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .e-bullets li {
+    font-size: 11.5px;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 14px;
+    position: relative;
+  }
+  .e-bullets li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-size: 10px;
+    top: 2px;
+  }
+  .e-bullets li strong { color: var(--ink); font-weight: 600; }
 
-    .toeic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
-    .t-cell {
-      background: var(--navy-light);
-      border-radius: 5px;
-      padding: 6px 8px;
-      border: 1px solid rgba(74,158,255,0.15);
-    }
-    .t-type { font-size: 8px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1px; font-weight: 600; }
-    .t-val { font-family: 'Inter Tight', sans-serif; font-size: 18px; font-weight: 700; color: white; line-height: 1; }
-    .t-max { font-size: 8px; color: rgba(255,255,255,0.35); }
+  /* GPA badge */
+  .gpa-inline {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--soft);
+    border: 1px solid var(--border);
+    padding: 1px 8px;
+    color: #333;
+    margin-left: 4px;
+  }
 
-    .item-list { display: flex; flex-direction: column; gap: 5px; }
-    .item-row { display: flex; align-items: center; gap: 7px; font-size: 10.5px; color: rgba(255,255,255,0.8); }
-    .item-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  /* PROJECTS */
+  .proj { margin-bottom: 12px; }
+  .proj:last-child { margin-bottom: 0; }
+  .p-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1px;
+  }
+  .p-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .p-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: color 0.15s;
+  }
+  .p-link:hover { color: #000; border-color: #000; }
+  .p-sub {
+    font-size: 11px;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .p-stack {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .p-stack span {
+    font-weight: 600;
+    color: #333;
+  }
+  .p-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 5px;
+  }
+  .p-bullets li {
+    font-size: 11.5px;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 14px;
+    position: relative;
+  }
+  .p-bullets li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-size: 10px;
+    top: 2px;
+  }
+  .p-bullets li strong { color: var(--ink); font-weight: 600; }
 
-    /* ══════════════ MAIN ══════════════ */
-    .main {
-      background: white;
-      padding: 26px 30px 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .profile-header { padding-bottom: 11px; border-bottom: 2px solid var(--navy); }
-    .profile-name {
-      font-family: 'Inter Tight', sans-serif;
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.05;
-      margin-bottom: 2px;
-    }
-    .profile-sub {
-      font-family: 'Inter', sans-serif;
-      font-size: 11px; font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .profile-text { font-size: 11px; color: var(--muted); line-height: 1.7; max-width: 490px; font-weight: 400; }
-    .stats-bar { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
-    .stat-item { flex: 1; text-align: center; padding: 8px 6px; border-right: 1px solid var(--border); }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy); }
-    .stat-lab { font-size: 8.5px; color: var(--light); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; font-weight: 500; }
-    .m-block { display: flex; flex-direction: column; gap: 8px; }
-    .m-title {
-      font-family: 'Inter', sans-serif;
-      font-size: 11px; font-weight: 700;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .m-title::after { content: ''; flex: 1; height: 2px; background: var(--navy); }
-    .entry { padding-bottom: 9px; border-bottom: 1px solid var(--border); }
-    .entry:last-child { border-bottom: none; padding-bottom: 0; }
-    .entry-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; margin-bottom: 2px; }
-    .entry-title { font-family: 'Inter Tight', sans-serif; font-size: 13px; font-weight: 700; color: var(--navy); }
-    .entry-date { font-size: 10px; color: var(--light); font-style: italic; white-space: nowrap; }
-    .entry-org { font-size: 10.5px; color: var(--accent); font-weight: 600; margin-bottom: 5px; letter-spacing: 0.02em; }
-    .entry-bullets { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .entry-bullets li { font-size: 11px; color: var(--muted); line-height: 1.6; padding-left: 13px; position: relative; }
-    .entry-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 9px; top: 2px; }
-    .entry-bullets li strong { color: var(--text); font-weight: 600; }
+  /* PERSONAL INFO */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 32px;
+  }
+  .info-row {
+    display: flex;
+    gap: 6px;
+    font-size: 11.5px;
+    line-height: 1.55;
+  }
+  .info-label {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    min-width: 72px;
+    flex-shrink: 0;
+  }
+  .info-val { color: var(--muted); }
+  .info-val a { color: var(--muted); text-decoration: none; }
+  .info-val a:hover { color: #000; }
 
-    /* Project cards */
-    .proj-grid { display: flex; flex-direction: column; gap: 7px; }
-    .proj-card {
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--navy);
-      border-radius: 4px;
-      padding: 9px 12px;
-    }
-    .proj-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 4px; flex-wrap: wrap; }
-    .proj-name { font-family: 'Inter Tight', sans-serif; font-size: 12px; font-weight: 700; color: var(--navy); }
-    .proj-links { display: flex; gap: 4px; flex-shrink: 0; }
-    .proj-link {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9px; color: var(--navy); text-decoration: none;
-      border: 1px solid var(--navy); padding: 2px 7px; border-radius: 3px;
-      white-space: nowrap; transition: all 0.2s; font-weight: 500;
-    }
-    .proj-link:hover { background: var(--navy); color: white; }
-    .proj-bullets { list-style: none; display: flex; flex-direction: column; gap: 2px; margin-bottom: 7px; }
-    .proj-bullets li { font-size: 11px; color: var(--muted); line-height: 1.6; padding-left: 13px; position: relative; }
-    .proj-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 9px; top: 2px; }
-    .proj-bullets li strong { color: var(--text); font-weight: 600; }
-    .tag-wrap { display: flex; flex-wrap: wrap; gap: 4px; }
-    .tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9px; padding: 2px 7px; border-radius: 3px;
-      background: var(--off-white); color: var(--muted); border: 1px solid var(--border);
-    }
+  /* TOEIC */
+  .toeic-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .toeic-cell {
+    background: var(--soft);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    text-align: center;
+  }
+  .tc-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .tc-val {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f0f0f;
+    line-height: 1.1;
+  }
+  .tc-max { font-size: 9px; color: var(--light); }
 
-    @media print {
-      body { background: white; padding: 0; gap: 0; }
-      .page { box-shadow: none; width: 100%; min-height: unset; }
-      .export-bar { display: none; }
-      @page { size: A4; margin: 0; }
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
-      }
-    }
-    @media (max-width: 680px) {
-      .export-bar { width: 100%; }
-      .page { grid-template-columns: 1fr; width: 100%; }
-      .main { padding: 24px 18px; }
-    }
-  </style>
+  /* SKILLS */
+  .sk-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sk-row {
+    display: flex;
+    gap: 6px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+  .sk-label {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+    min-width: 72px;
+    flex-shrink: 0;
+  }
+  .sk-val { color: var(--muted); }
+
+  .proj-rule { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 100%; padding: 40px 50px; }
+    .export-bar { display: none; }
+    @page { size: A4; margin: 0; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+</style>
 </head>
 <body>
 
-  <div class="export-bar">
-    <button class="export-btn" onclick="window.print()">⬇ Export PDF</button>
-  </div>
+<div class="export-bar">
+  <button class="export-btn" onclick="window.print()">Export PDF</button>
+</div>
 
 <div class="page">
 
-  <!-- ══ SIDEBAR ══ -->
-  <aside class="sidebar">
-    <div class="avatar-wrap">
-      <img src="avt.jpg" alt="Tran Quang Minh" onerror="this.style.display='none'">
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-name">Tran Quang Minh</div>
+    <div class="hdr-role">AI / ML Engineer &nbsp; Year 3 Student &nbsp; Open to Internship</div>
+  </div>
+
+  <!-- PERSONAL INFORMATION -->
+  <div class="section">
+    <div class="sec-title">Personal Information</div>
+    <div class="info-grid">
+      <div class="info-row"><span class="info-label">Phone</span><span class="info-val"><a href="tel:+84985324912">098 532 4912</a></span></div>
+      <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span></div>
+      <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span></div>
+      <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/" target="_blank">linkedin.com/in/minh-tran-quang</a></span></div>
+      <div class="info-row"><span class="info-label">Location</span><span class="info-val">Ho Chi Minh City, Vietnam</span></div>
     </div>
-    <div class="sidebar-name">Tran Quang Minh</div>
+  </div>
 
-    <!-- Apply-for block -->
-    <div class="apply-block">
-      <div class="apply-label">Seeking Internship Opportunities</div>
-      <div class="apply-badges">
-        <span class="apply-badge">Software Engineer</span>
-        <span class="apply-badge">ML / AI Engineer</span>
-        <span class="apply-badge">Data Scientist</span>
-        <span class="apply-badge intern">📌 Open to Intern Roles</span>
+  <!-- PROFILE -->
+  <div class="section">
+    <div class="sec-title">Profile</div>
+    <p class="summary-text">
+      Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems including LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation). Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
+    </p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="sec-title">Education</div>
+    <div class="entry">
+      <div class="e-head">
+        <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 / 4.0</span></div>
+        <div class="e-date">September 2023 - Present</div>
       </div>
+      <div class="e-sub">Bachelor of Engineering - Information Technology - Major: Software Engineering</div>
+      <ul class="e-bullets">
+        <li>Academic score: <strong>7.85 / 10</strong></li>
+        <li>Served as <strong>team leader</strong> in Web Programming, Software Engineering, Machine Learning, and Digital Image Processing courses.</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="s-block">
-      <div class="s-title">Contact</div>
-      <div class="contact-list">
-        <a class="contact-row" href="tel:+84985324912">
-          <span class="ci">☎</span> 098 532 4912
-        </a>
-        <a class="contact-row" href="/cdn-cgi/l/email-protection#6b060205035b5a595a59525952525c522b0c060a020745080406">
-          <span class="ci">✉</span> <span class="__cf_email__" data-cfemail="d2bfbbbcbae2e3e0e3e0ebe0ebebe5eb92b5bfb3bbbefcb1bdbf">minh01212929979@gmail.com</span>
-        </a>
-        <a class="contact-row" href="https://github.com/Minh1billion" target="_blank">
-          <span class="ci">⌥</span> github.com/Minh1billion
-        </a>
-        <a class="contact-row" href="https://www.linkedin.com/in/minh-trần-quang-bb4433377/" target="_blank">
-          <span class="ci">in</span> linkedin.com/in/minh-trần-quang
-        </a>
-        <div class="contact-row">
-          <span class="ci">◎</span> Ho Chi Minh City, Vietnam
-        </div>
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="sec-title">Projects</div>
+
+    <!-- DALreaDone -->
+    <div class="proj">
+      <div class="p-head">
+        <div class="p-title">DALreaDone - AI Data Analytics Platform</div>
+        <a class="p-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">github.com/Minh1billion/dalreadone</a>
       </div>
+      <div class="p-sub">Personal Project &nbsp; Full-stack, LLM, Background Task Processing</div>
+      <div class="p-stack"><span>Stack:</span> FastAPI, React, TypeScript, PostgreSQL, Redis, AWS S3, Groq API, LLaMA 3.3-70b, Docker Compose</div>
+      <ul class="p-bullets">
+        <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation, quality scoring) running as background task with live progress polling.</li>
+        <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON: domain inference, severity-tagged issues, semantic type detection, and keep/drop candidates.</li>
+        <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation, encoding, scaling, feature engineering); datasets saved to AWS S3.</li>
+        <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT, httpOnly cookie, OAuth2 (Google, GitHub); task state in Redis.</li>
+      </ul>
     </div>
+    <hr class="proj-rule"/>
 
-    <div class="s-block">
-      <div class="s-title">Skills</div>
-
-      <!-- ML / AI -->
-      <div class="skill-group">
-        <div class="sg-label">ML / AI</div>
-        <div class="tag-cloud">
-          <span class="s-tag core">Python</span>
-          <span class="s-tag core">PyTorch</span>
-          <span class="s-tag core">Scikit-learn</span>
-          <span class="s-tag">HuggingFace</span>
-          <span class="s-tag">LLaMA 3</span>
-          <span class="s-tag">Groq API</span>
-          <span class="s-tag">Pandas</span>
-          <span class="s-tag">NumPy</span>
-        </div>
+    <!-- Minesweeper Hybrid RL Agent -->
+    <div class="proj">
+      <div class="p-head">
+        <div class="p-title">Minesweeper Hybrid RL Agent - 45% Winrate Solver</div>
+        <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
       </div>
-
-      <!-- Software Engineering -->
-      <div class="skill-group">
-        <div class="sg-label">Software Engineering</div>
-        <div class="tag-cloud">
-          <span class="s-tag core">FastAPI</span>
-          <span class="s-tag core">React</span>
-          <span class="s-tag">TypeScript</span>
-          <span class="s-tag">Spring Boot</span>
-          <span class="s-tag">Tailwind CSS</span>
-          <span class="s-tag">REST API</span>
-          <span class="s-tag">JWT / OAuth2</span>
-        </div>
-      </div>
-
-      <!-- Infra / Data -->
-      <div class="skill-group">
-        <div class="sg-label">Infra / Data</div>
-        <div class="tag-cloud">
-          <span class="s-tag">Docker</span>
-          <span class="s-tag">AWS EC2 / S3</span>
-          <span class="s-tag">PostgreSQL</span>
-          <span class="s-tag">Redis</span>
-          <span class="s-tag">Qdrant</span>
-          <span class="s-tag">Supabase</span>
-          <span class="s-tag">Git / GitHub</span>
-          <span class="s-tag">Jupyter</span>
-        </div>
-      </div>
+      <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
+      <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
+      <ul class="p-bullets">
+        <li>Hybrid AI agent combining <strong>constraint solver, Q-learning, and random fallback</strong> - achieving ~45% win rate on a 10x10 board with 15 mines.</li>
+        <li><strong>Frontier-based optimization</strong>: evaluates only boundary cells instead of the full grid; local state window reduces state space while preserving spatial patterns.</li>
+        <li><strong>Confidence-aware Q-learning</strong>: avoids low-certainty actions via Q-margin threshold; custom training loop without Gym with real-time debugging UI.</li>
+      </ul>
     </div>
 
-    <div class="s-block">
-      <div class="s-title">TOEIC</div>
-      <div class="toeic-grid">
-        <div class="t-cell"><div class="t-type">Reading</div><div class="t-val">400</div><div class="t-max">/ 495</div></div>
-        <div class="t-cell"><div class="t-type">Listening</div><div class="t-val">395</div><div class="t-max">/ 495</div></div>
-        <div class="t-cell"><div class="t-type">Writing</div><div class="t-val">160</div><div class="t-max">/ 200</div></div>
-        <div class="t-cell"><div class="t-type">Speaking</div><div class="t-val">140</div><div class="t-max">/ 200</div></div>
+    <hr class="proj-rule"/>
+
+    <!-- News Gathering Assistant -->
+    <div class="proj">
+      <div class="p-head">
+        <div class="p-title">News Gathering Assistant - Vietnamese Tech News Intelligence</div>
+        <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant" target="_blank">github.com/Minh1billion/news-gathering-assistant</a>
       </div>
+      <div class="p-sub">Technical Assessment Project &nbsp; Full-stack, NLP, Data Pipeline</div>
+      <div class="p-stack"><span>Stack:</span> Python 3.11, FastAPI, React 18, Sentence-Transformers, Qdrant, PostgreSQL, scikit-learn, Docker Compose</div>
+      <ul class="p-bullets">
+        <li>End-to-end pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien, TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into PostgreSQL.</li>
+        <li><strong>Vietnamese SBERT embeddings</strong> stored in Qdrant for semantic deduplication and relevance scoring.</li>
+        <li><strong>K-means clustering</strong> with silhouette-score auto-tuning, TF-IDF keyword extraction, and topic labeling producing structured weekly JSON reports.</li>
+        <li><strong>React 18 dashboard</strong>: executive summary, trending keywords, topic distribution, daily volume charts, and PDF export.</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="s-block">
-      <div class="s-title">Soft Skills</div>
-      <div class="item-list">
-        <div class="item-row"><span class="item-dot"></span> Team Lead</div>
-        <div class="item-row"><span class="item-dot"></span> Self-directed Learning</div>
-        <div class="item-row"><span class="item-dot"></span> Accountability</div>
-        <div class="item-row"><span class="item-dot"></span> Analytical Thinking</div>
-        <div class="item-row"><span class="item-dot"></span> Collaboration</div>
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="sec-title">Technical Skills</div>
+    <div class="sk-list">
+      <div class="sk-row"><span class="sk-label">AI / ML</span><span class="sk-val">Python, PyTorch, scikit-learn, Sentence-Transformers, LangChain, HuggingFace, OpenCV</span></div>
+      <div class="sk-row"><span class="sk-label">Backend</span><span class="sk-val">FastAPI, Spring Boot, PostgreSQL, Redis, Qdrant, Docker, Nginx, AWS EC2, AWS S3</span></div>
+      <div class="sk-row"><span class="sk-label">Frontend</span><span class="sk-val">React, Next.js, TypeScript, Tailwind CSS</span></div>
+      <div class="sk-row"><span class="sk-label">Tools</span><span class="sk-val">Git, GitHub Actions, Jupyter, Docker Compose</span></div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="sec-title">Certifications</div>
+    <div class="entry">
+      <div class="e-head">
+        <div class="e-org">TOEIC - Test of English for International Communication</div>
       </div>
+      <ul class="e-bullets">
+        <li>Reading: <strong>400 / 495</strong></li>
+        <li>Listening: <strong>395 / 495</strong></li>
+        <li>Writing: <strong>160 / 200</strong></li>
+        <li>Speaking: <strong>140 / 200</strong></li>
+      </ul>
     </div>
-  </aside>
+  </div>
 
-  <!-- ══ MAIN ══ -->
-  <main class="main">
-
-    <div class="profile-header">
-      <div class="profile-name">Tran Quang Minh</div>
-      <div class="profile-sub">AI / ML · Year 3 Student</div>
-      <p class="profile-text">
-        Third-year Software Engineering student at HCMUTE with hands-on experience building
-        end-to-end AI systems and full-stack web applications. Comfortable working across the
-        entire development lifecycle - from data pipelines and model integration to backend APIs
-        and responsive frontend interfaces. Experienced with LLM-powered features, RAG architectures,
-        vector databases, and real-time data processing. Passionate about applying ML and modern
-        software engineering practices to solve practical problems, and actively seeking an internship
-        opportunity to contribute to and grow within a professional team.
-      </p>
-    </div>
-
-    <div>
-      <div class="stats-bar">
-        <div class="stat-item"><div class="stat-num">3.15</div><div class="stat-lab">GPA / 4.0</div></div>
-        <div class="stat-item"><div class="stat-num">7.85</div><div class="stat-lab">Score / 10</div></div>
-        <div class="stat-item"><div class="stat-num">Year 3</div><div class="stat-lab">Current Year</div></div>
-        <div class="stat-item"><div class="stat-num">5+</div><div class="stat-lab">Projects Led</div></div>
-      </div>
-    </div>
-
-    <div class="m-block">
-      <div class="m-title">Education</div>
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-title">Ho Chi Minh City University of Technology and Education</div>
-          <div class="entry-date">Sep 2023 - Present</div>
-        </div>
-        <div class="entry-org">B.Eng. · Information Technology · Major: Software Engineering</div>
-        <ul class="entry-bullets">
-          <li>GPA: <strong>3.15 / 4.0</strong> (7.85 / 10)</li>
-          <li>Team leader across Web Programming, Software Engineering, Machine Learning, and Digital Image Processing courses.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="m-block">
-      <div class="m-title">Projects</div>
-      <div class="proj-grid">
-
-        <!-- DALreaDone -->
-        <div class="proj-card">
-          <div class="proj-head">
-            <div class="proj-name">DALreaDone - AI Data Analytics Platform</div>
-            <div class="proj-links">
-              <a class="proj-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">↗ GitHub</a>
-            </div>
-          </div>
-          <ul class="proj-bullets">
-            <li>Automated <strong>8-step EDA pipeline</strong> (schema, missing values, correlations, quality score) running as a background task with live progress polling.</li>
-            <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON - domain inference, severity-tagged issues, semantic types, and keep/drop candidates.</li>
-            <li><strong>AI-suggested preprocessing pipeline</strong>: composable fit/transform ops; result saved to S3 and immediately available for a new EDA run.</li>
-            <li>Live <strong>LLM cost tracking via SSE</strong>; auth via JWT + httpOnly cookie + <strong>OAuth2</strong> (Google, GitHub); task state in <strong>Redis</strong>.</li>
-          </ul>
-          <div class="tag-wrap">
-            <span class="tag">FastAPI</span><span class="tag">React + TypeScript</span>
-            <span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">AWS S3</span>
-            <span class="tag">Groq API</span><span class="tag">LLaMA 3.3-70b</span><span class="tag">Docker Compose</span>
-          </div>
-        </div>
-
-        <!-- Npixie -->
-        <div class="proj-card">
-          <div class="proj-head">
-            <div class="proj-name">Npixie - RAG Chatbot</div>
-            <div class="proj-links">
-              <a class="proj-link" href="https://github.com/Minh1billion/npixie-master" target="_blank">↗ GitHub</a>
-            </div>
-          </div>
-          <ul class="proj-bullets">
-            <li>RAG-powered chatbot with <strong>Qdrant</strong> vector search (sentence-transformers) + <strong>Groq LLaMA</strong> generation; answers grounded in ingested lore documents.</li>
-            <li><strong>5 NPC personas</strong> auto-selected by keyword routing, each defined as a <strong>YAML config</strong> - adding a new character requires zero code changes.</li>
-            <li>Live product recommendations from <strong>Supabase</strong>; deployed via <strong>Docker Compose</strong> with REST + Swagger UI.</li>
-          </ul>
-          <div class="tag-wrap">
-            <span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">sentence-transformers</span>
-            <span class="tag">Groq API</span><span class="tag">LLaMA 3.1-8b</span><span class="tag">Supabase</span>
-            <span class="tag">Docker Compose</span><span class="tag">RAG</span><span class="tag">Python</span>
-          </div>
-        </div>
- 
-      </div>
-    </div>
- 
-  </main>
 </div>
- 
 </body>
 </html>
