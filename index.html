@@ -401,19 +401,19 @@
     <hr class="proj-rule"/>
 
     <!-- Minesweeper Hybrid RL Agent -->
-    <div class="proj">
-      <div class="p-head">
-        <div class="p-title">Minesweeper Hybrid RL Agent - 45% Winrate Solver</div>
-        <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
-      </div>
-      <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
-      <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
-      <ul class="p-bullets">
-        <li>Hybrid AI agent combining <strong>constraint solver, Q-learning, and random fallback</strong> - achieving ~45% win rate on a 10x10 board with 15 mines.</li>
-        <li><strong>Frontier-based optimization</strong>: evaluates only boundary cells instead of the full grid; local state window reduces state space while preserving spatial patterns.</li>
-        <li><strong>Confidence-aware Q-learning</strong>: avoids low-certainty actions via Q-margin threshold; custom training loop without Gym with real-time debugging UI.</li>
-      </ul>
+  <div class="proj">
+    <div class="p-head">
+      <div class="p-title">Minesweeper Hybrid RL Agent - 40% Win Rate Solver</div>
+      <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
     </div>
+    <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
+    <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
+    <ul class="p-bullets">
+      <li>Hybrid AI agent with a <strong>4-layer decision pipeline</strong> (constraint solver → probability filter → Q-table → random fallback), achieving ~<strong>40% all-time win rate</strong> (~55% rolling) on a 10×10 board with 15 mines after 50,000 training episodes.</li>
+      <li><strong>Constraint solver</strong> handles ~87% of decisions deterministically; probability filter estimates P(mine | cell) from neighboring number cells for high-confidence guesses (~7%); Q-table intervenes only in genuinely ambiguous cases (~5%).</li>
+      <li><strong>Local 5×5 state window</strong> keeps the Q-table feasible at 1.83M states; frontier-only evaluation focuses learning on boundary cells; custom training loop (no Gym) with real-time pygame debug UI and per-step decision source tracking.</li>
+    </ul>
+  </div>
 
     <hr class="proj-rule"/>
 
