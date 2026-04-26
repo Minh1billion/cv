@@ -1,487 +1,632 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tran Quang Minh - CV</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink:    #0f0f0f;
-    --rule:   #aaa;
-    --soft:   #f5f5f5;
-    --muted:  #555;
-    --light:  #888;
-    --border: #ddd;
-    --accent: #1a1a1a;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tran Quang Minh - CV</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f0f0f;
+      --rule: #aaa;
+      --soft: #f5f5f5;
+      --muted: #555;
+      --light: #888;
+      --border: #ddd;
+      --accent: #1a1a1a;
+    }
 
-  body {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12px;
-    color: var(--ink);
-    background: #6b6b6b;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 28px 20px;
-    gap: 12px;
-  }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  .export-bar {
-    width: 760px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .export-btn {
-    background: #1a1a1a;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-  .export-btn:hover { opacity: 0.7; }
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 12px;
+      color: var(--ink);
+      background: #6b6b6b;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 20px;
+      gap: 12px;
+    }
 
-  .page {
-    width: 760px;
-    background: white;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.22);
-    padding: 52px 56px 56px;
-  }
+    .export-bar {
+      width: 760px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-  /* HEADER */
-  .hdr {
-    text-align: center;
-    border-bottom: 2px solid #0f0f0f;
-    padding-bottom: 18px;
-    margin-bottom: 18px;
-  }
-  .hdr-name {
-    font-family: 'EB Garamond', serif;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-  .hdr-role {
-    font-family: 'EB Garamond', serif;
-    font-size: 14.5px;
-    color: #444;
-    margin-bottom: 10px;
-    letter-spacing: 0.02em;
-  }
-  .hdr-contact {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4px 16px;
-    font-size: 11px;
-    color: var(--muted);
-  }
-  .hdr-contact a { color: var(--muted); text-decoration: none; }
-  .hdr-contact a:hover { color: #000; }
-  .sep { color: #ccc; }
+    .export-btn {
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
 
-  /* SECTION */
-  .section { margin-bottom: 15px; }
-  .sec-title {
-    font-family: 'EB Garamond', serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f0f0f;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    border-bottom: 1px solid #0f0f0f;
-    padding-bottom: 3px;
-    margin-bottom: 10px;
-  }
+    .export-btn:hover {
+      opacity: 0.7;
+    }
 
-  /* SUMMARY */
-  .summary-text {
-    font-family: 'EB Garamond', serif;
-    font-size: 13px;
-    line-height: 1.75;
-    color: var(--ink);
-    text-align: justify;
-  }
+    .page {
+      width: 760px;
+      background: white;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.22);
+      padding: 52px 56px 56px;
+    }
 
-  /* EDUCATION */
-  .entry { margin-bottom: 10px; }
-  .e-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 1px;
-  }
-  .e-org {
-    font-family: 'EB Garamond', serif;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-  .e-date {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 10.5px;
-    color: var(--light);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .e-sub {
-    font-size: 11.5px;
-    color: #444;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .e-bullets {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .e-bullets li {
-    font-size: 11.5px;
-    color: #333;
-    line-height: 1.6;
-    padding-left: 14px;
-    position: relative;
-  }
-  .e-bullets li::before {
-    content: '-';
-    position: absolute;
-    left: 0;
-    color: var(--rule);
-    font-size: 10px;
-    top: 2px;
-  }
-  .e-bullets li strong { color: var(--ink); font-weight: 600; }
+    /* HEADER */
+    .hdr {
+      text-align: center;
+      border-bottom: 2px solid #0f0f0f;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
 
-  /* GPA badge */
-  .gpa-inline {
-    display: inline-block;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    background: var(--soft);
-    border: 1px solid var(--border);
-    padding: 1px 8px;
-    color: #333;
-    margin-left: 4px;
-  }
+    .hdr-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
 
-  /* PROJECTS */
-  .proj { margin-bottom: 12px; }
-  .proj:last-child { margin-bottom: 0; }
-  .p-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 1px;
-  }
-  .p-title {
-    font-family: 'EB Garamond', serif;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-  .p-link {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9.5px;
-    color: var(--muted);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: color 0.15s;
-  }
-  .p-link:hover { color: #000; border-color: #000; }
-  .p-sub {
-    font-size: 11px;
-    color: #444;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .p-stack {
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 4px;
-  }
-  .p-stack span {
-    font-weight: 600;
-    color: #333;
-  }
-  .p-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    margin-bottom: 5px;
-  }
-  .p-bullets li {
-    font-size: 11.5px;
-    color: #333;
-    line-height: 1.6;
-    padding-left: 14px;
-    position: relative;
-  }
-  .p-bullets li::before {
-    content: '-';
-    position: absolute;
-    left: 0;
-    color: var(--rule);
-    font-size: 10px;
-    top: 2px;
-  }
-  .p-bullets li strong { color: var(--ink); font-weight: 600; }
+    .hdr-role {
+      font-family: 'EB Garamond', serif;
+      font-size: 14.5px;
+      color: #444;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
 
-  /* PERSONAL INFO */
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px 32px;
-  }
-  .info-row {
-    display: flex;
-    gap: 6px;
-    font-size: 11.5px;
-    line-height: 1.55;
-  }
-  .info-label {
-    font-weight: 600;
-    color: var(--ink);
-    white-space: nowrap;
-    min-width: 72px;
-    flex-shrink: 0;
-  }
-  .info-val { color: var(--muted); }
-  .info-val a { color: var(--muted); text-decoration: none; }
-  .info-val a:hover { color: #000; }
+    .hdr-contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 11px;
+      color: var(--muted);
+    }
 
-  /* TOEIC */
-  .toeic-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 2px;
-  }
-  .toeic-cell {
-    background: var(--soft);
-    border: 1px solid var(--border);
-    padding: 5px 14px;
-    text-align: center;
-  }
-  .tc-label {
-    font-size: 9px;
-    font-weight: 600;
-    color: var(--light);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .tc-val {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #0f0f0f;
-    line-height: 1.1;
-  }
-  .tc-max { font-size: 9px; color: var(--light); }
+    .hdr-contact a {
+      color: var(--muted);
+      text-decoration: none;
+    }
 
-  /* SKILLS */
-  .sk-list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .sk-row {
-    display: flex;
-    gap: 6px;
-    font-size: 11.5px;
-    line-height: 1.5;
-  }
-  .sk-label {
-    font-weight: 600;
-    color: var(--ink);
-    white-space: nowrap;
-    min-width: 72px;
-    flex-shrink: 0;
-  }
-  .sk-val { color: var(--muted); }
+    .hdr-contact a:hover {
+      color: #000;
+    }
 
-  .proj-rule { border: none; border-top: 1px solid var(--border); margin: 10px 0; }
+    .sep {
+      color: #ccc;
+    }
 
-  @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; width: 100%; padding: 40px 50px; }
-    .export-bar { display: none; }
-    @page { size: A4; margin: 0; }
-    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  }
-</style>
+    /* SECTION */
+    .section {
+      margin-bottom: 15px;
+    }
+
+    .sec-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f0f0f;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      border-bottom: 1px solid #0f0f0f;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      font-family: 'EB Garamond', serif;
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink);
+      text-align: justify;
+    }
+
+    /* EDUCATION */
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .e-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .e-org {
+      font-family: 'EB Garamond', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .e-date {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 10.5px;
+      color: var(--light);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .e-sub {
+      font-size: 11.5px;
+      color: #444;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .e-bullets {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .e-bullets li {
+      font-size: 11.5px;
+      color: #333;
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .e-bullets li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+      font-size: 10px;
+      top: 2px;
+    }
+
+    .e-bullets li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* GPA badge */
+    .gpa-inline {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      padding: 1px 8px;
+      color: #333;
+      margin-left: 4px;
+    }
+
+    /* PROJECTS */
+    .proj {
+      margin-bottom: 12px;
+    }
+
+    .proj:last-child {
+      margin-bottom: 0;
+    }
+
+    .p-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .p-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .p-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.15s;
+    }
+
+    .p-link:hover {
+      color: #000;
+      border-color: #000;
+    }
+
+    .p-sub {
+      font-size: 11px;
+      color: #444;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .p-stack {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .p-stack span {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .p-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 5px;
+    }
+
+    .p-bullets li {
+      font-size: 11.5px;
+      color: #333;
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .p-bullets li::before {
+      content: '-';
+      position: absolute;
+      left: 0;
+      color: var(--rule);
+      font-size: 10px;
+      top: 2px;
+    }
+
+    .p-bullets li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* PERSONAL INFO */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 32px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 6px;
+      font-size: 11.5px;
+      line-height: 1.55;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+
+    .info-val {
+      color: var(--muted);
+    }
+
+    .info-val a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .info-val a:hover {
+      color: #000;
+    }
+
+    /* TOEIC */
+    .toeic-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .toeic-cell {
+      background: var(--soft);
+      border: 1px solid var(--border);
+      padding: 5px 14px;
+      text-align: center;
+    }
+
+    .tc-label {
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .tc-val {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f0f0f;
+      line-height: 1.1;
+    }
+
+    .tc-max {
+      font-size: 9px;
+      color: var(--light);
+    }
+
+    /* SKILLS */
+    .sk-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sk-row {
+      display: flex;
+      gap: 6px;
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .sk-label {
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+
+    .sk-val {
+      color: var(--muted);
+    }
+
+    .proj-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 10px 0;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .page {
+        box-shadow: none;
+        width: 100%;
+        padding: 40px 50px;
+      }
+
+      .export-bar {
+        display: none;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="export-bar">
-  <button class="export-btn" onclick="window.print()">Export PDF</button>
-</div>
-
-<div class="page">
-
-  <!-- HEADER -->
-  <div class="hdr">
-    <div class="hdr-name">Tran Quang Minh</div>
-    <div class="hdr-role">AI / ML Engineer &nbsp; Year 3 Student &nbsp; Open to Internship</div>
+  <div class="export-bar">
+    <button class="export-btn" onclick="window.print()">Export PDF</button>
   </div>
 
-  <!-- PERSONAL INFORMATION -->
-  <div class="section">
-    <div class="sec-title">Personal Information</div>
-    <div class="info-grid">
-      <div class="info-row"><span class="info-label">Phone</span><span class="info-val"><a href="tel:+84985324912">098 532 4912</a></span></div>
-      <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span></div>
-      <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span></div>
-      <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val"><a href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/" target="_blank">linkedin.com/in/minh-tran-quang</a></span></div>
-      <div class="info-row"><span class="info-label">Location</span><span class="info-val">Ho Chi Minh City, Vietnam</span></div>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="hdr">
+      <div class="hdr-name">Tran Quang Minh</div>
+      <div class="hdr-role">AI / ML Engineer &nbsp; Year 3 Student &nbsp; Open to Internship</div>
     </div>
-  </div>
 
-  <!-- PROFILE -->
-  <div class="section">
-    <div class="sec-title">Profile</div>
-    <p class="summary-text">
-      Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems including LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation). Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
-    </p>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section">
-    <div class="sec-title">Education</div>
-    <div class="entry">
-      <div class="e-head">
-        <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 / 4.0</span></div>
-        <div class="e-date">September 2023 - Present</div>
-      </div>
-      <div class="e-sub">Bachelor of Engineering - Information Technology - Major: Software Engineering</div>
-      <ul class="e-bullets">
-        <li>Academic score: <strong>7.85 / 10</strong></li>
-        <li>Served as <strong>team leader</strong> in Web Programming, Software Engineering, Machine Learning, and Digital Image Processing courses.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <div class="sec-title">Projects</div>
-
-    <!-- DALreaDone -->
-    <div class="proj">
-      <div class="p-head">
-        <div class="p-title">DALreaDone - AI Data Analytics Platform</div>
-        <a class="p-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">github.com/Minh1billion/dalreadone</a>
-      </div>
-      <div class="p-sub">Personal Project &nbsp; Full-stack, LLM, Background Task Processing</div>
-      <div class="p-stack"><span>Stack:</span> FastAPI, React, TypeScript, PostgreSQL, Redis, AWS S3, Groq API, LLaMA 3.3-70b, Docker Compose</div>
-      <ul class="p-bullets">
-        <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation, quality scoring) running as background task with live progress polling.</li>
-        <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON: domain inference, severity-tagged issues, semantic type detection, and keep/drop candidates.</li>
-        <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation, encoding, scaling, feature engineering); datasets saved to AWS S3.</li>
-        <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT, httpOnly cookie, OAuth2 (Google, GitHub); task state in Redis.</li>
-      </ul>
-    </div>
-    <hr class="proj-rule"/>
-
-    <!-- Minesweeper Hybrid RL Agent -->
-  <div class="proj">
-    <div class="p-head">
-      <div class="p-title">Minesweeper Hybrid RL Agent - 40% Win Rate Solver</div>
-      <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
-    </div>
-    <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
-    <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
-    <ul class="p-bullets">
-      <li>Hybrid AI agent with a <strong>4-layer decision pipeline</strong> (constraint solver → probability filter → Q-table → random fallback), achieving ~<strong>40% all-time win rate</strong> (~55% rolling) on a 10×10 board with 15 mines after 50,000 training episodes.</li>
-      <li><strong>Constraint solver</strong> handles ~87% of decisions deterministically; probability filter estimates P(mine | cell) from neighboring number cells for high-confidence guesses (~7%); Q-table intervenes only in genuinely ambiguous cases (~5%).</li>
-      <li><strong>Local 5×5 state window</strong> keeps the Q-table feasible at 1.83M states; frontier-only evaluation focuses learning on boundary cells; custom training loop (no Gym) with real-time pygame debug UI and per-step decision source tracking.</li>
-    </ul>
-  </div>
-
-    <hr class="proj-rule"/>
-
-    <!-- News Gathering Assistant -->
-    <div class="proj">
-      <div class="p-head">
-        <div class="p-title">News Gathering Assistant - Vietnamese Tech News Intelligence</div>
-        <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant" target="_blank">github.com/Minh1billion/news-gathering-assistant</a>
-      </div>
-      <div class="p-sub">Technical Assessment Project &nbsp; Full-stack, NLP, Data Pipeline</div>
-      <div class="p-stack"><span>Stack:</span> Python 3.11, FastAPI, React 18, Sentence-Transformers, Qdrant, PostgreSQL, scikit-learn, Docker Compose</div>
-      <ul class="p-bullets">
-        <li>End-to-end pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien, TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into PostgreSQL.</li>
-        <li><strong>Vietnamese SBERT embeddings</strong> stored in Qdrant for semantic deduplication and relevance scoring.</li>
-        <li><strong>K-means clustering</strong> with silhouette-score auto-tuning, TF-IDF keyword extraction, and topic labeling producing structured weekly JSON reports.</li>
-        <li><strong>React 18 dashboard</strong>: executive summary, trending keywords, topic distribution, daily volume charts, and PDF export.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="section">
-    <div class="sec-title">Technical Skills</div>
-<div class="sk-list">
-      <div class="sk-row">
-        <span class="sk-label">Language</span>
-        <span class="sk-val">Python, Java, SQL</span>
-      </div>
-
-      <div class="sk-row">
-        <span class="sk-label">Framework / Library</span>
-        <span class="sk-val">
-          PyTorch, Scikit-learn, Pandas, NumPy, FastAPI, Spring Boot, React, Next.js, Tailwind CSS
-        </span>
-      </div>
-
-      <div class="sk-row">
-        <span class="sk-label">Infrastructure</span>
-        <span class="sk-val">
-          PostgreSQL, Redis, Qdrant, Docker, AWS EC2, AWS S3
-        </span>
-      </div>
-
-      <div class="sk-row">
-        <span class="sk-label">Tools</span>
-        <span class="sk-val">
-          Git, GitHub Actions, Docker Compose
-        </span>
+    <!-- PERSONAL INFORMATION -->
+    <div class="section">
+      <div class="sec-title">Personal Information</div>
+      <div class="info-grid">
+        <div class="info-row"><span class="info-label">Phone</span><span class="info-val"><a href="tel:+84985324912">098
+              532 4912</a></span></div>
+        <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a
+              href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span></div>
+        <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a
+              href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span></div>
+        <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val"><a
+              href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/"
+              target="_blank">linkedin.com/in/minh-tran-quang</a></span></div>
+        <div class="info-row"><span class="info-label">Location</span><span class="info-val">Ho Chi Minh City,
+            Vietnam</span></div>
       </div>
     </div>
-  </div>
 
-  <!-- CERTIFICATIONS -->
-  <div class="section">
-    <div class="sec-title">Certifications</div>
-    <div class="entry">
-      <div class="e-head">
-        <div class="e-org">TOEIC - Test of English for International Communication</div>
-      </div>
-      <ul class="e-bullets">
-        <li>Reading: <strong>400 / 495</strong></li>
-        <li>Listening: <strong>395 / 495</strong></li>
-        <li>Writing: <strong>160 / 200</strong></li>
-        <li>Speaking: <strong>140 / 200</strong></li>
-      </ul>
+    <!-- PROFILE -->
+    <div class="section">
+      <div class="sec-title">Profile</div>
+      <p class="summary-text">
+        Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems including
+        LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end
+        projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation).
+        Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
+      </p>
     </div>
-  </div>
 
-</div>
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="sec-title">Education</div>
+      <div class="entry">
+        <div class="e-head">
+          <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 /
+              4.0</span></div>
+          <div class="e-date">September 2023 - Present</div>
+        </div>
+        <div class="e-sub">Bachelor of Engineering - Information Technology - Major: Software Engineering</div>
+        <ul class="e-bullets">
+          <li>Academic score: <strong>7.85 / 10</strong></li>
+          <li>Served as <strong>team leader</strong> in Web Programming, Software Engineering, Machine Learning, and
+            Digital Image Processing courses.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="sec-title">Projects</div>
+
+      <!-- DALreaDone -->
+      <div class="proj">
+        <div class="p-head">
+          <div class="p-title">DALreaDone - AI Data Analytics Platform</div>
+          <a class="p-link" href="https://github.com/Minh1billion/dalreadone"
+            target="_blank">github.com/Minh1billion/dalreadone</a>
+        </div>
+        <div class="p-sub">Personal Project &nbsp; Full-stack, LLM, Background Task Processing</div>
+        <div class="p-stack"><span>Stack:</span> FastAPI, React, TypeScript, PostgreSQL, Redis, AWS S3, Groq API, LLaMA
+          3.3-70b, Docker Compose</div>
+        <ul class="p-bullets">
+          <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation,
+            quality scoring) running as background task with live progress polling.</li>
+          <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON: domain inference,
+            severity-tagged issues, semantic type detection, and keep/drop candidates.</li>
+          <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation,
+            encoding, scaling, feature engineering); datasets saved to AWS S3.</li>
+          <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT, httpOnly
+            cookie, OAuth2 (Google, GitHub); task state in Redis.</li>
+        </ul>
+      </div>
+      <hr class="proj-rule" />
+
+      <!-- Minesweeper Hybrid RL Agent -->
+      <div class="proj">
+        <div class="p-head">
+          <div class="p-title">Minesweeper Hybrid RL Agent - 40% Win Rate Solver</div>
+          <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent"
+            target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
+        </div>
+        <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
+        <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
+        <ul class="p-bullets">
+          <li>Hybrid AI agent with a <strong>4-layer decision pipeline</strong> (constraint solver → probability filter
+            → Q-table → random fallback), achieving ~<strong>40% all-time win rate</strong> (~55% rolling) on a 10×10
+            board with 15 mines after 50,000 training episodes.</li>
+          <li><strong>Constraint solver</strong> handles ~87% of decisions deterministically; probability filter
+            estimates P(mine | cell) from neighboring number cells for high-confidence guesses (~7%); Q-table intervenes
+            only in genuinely ambiguous cases (~5%).</li>
+          <li><strong>Local 5×5 state window</strong> keeps the Q-table feasible at 1.83M states; frontier-only
+            evaluation focuses learning on boundary cells; custom training loop (no Gym) with real-time pygame debug UI
+            and per-step decision source tracking.</li>
+        </ul>
+      </div>
+
+      <hr class="proj-rule" />
+
+      <!-- News Gathering Assistant -->
+      <div class="proj">
+        <div class="p-head">
+          <div class="p-title">News Gathering Assistant - Vietnamese Tech News Intelligence</div>
+          <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant"
+            target="_blank">github.com/Minh1billion/news-gathering-assistant</a>
+        </div>
+        <div class="p-sub">Technical Assessment Project &nbsp; Full-stack, NLP, Data Pipeline</div>
+        <div class="p-stack"><span>Stack:</span> Python 3.11, FastAPI, React 18, Sentence-Transformers, Qdrant,
+          PostgreSQL, scikit-learn, Docker Compose</div>
+        <ul class="p-bullets">
+          <li>End-to-end pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien,
+            TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into
+            PostgreSQL.</li>
+          <li><strong>Vietnamese SBERT embeddings</strong> stored in Qdrant for semantic deduplication and relevance
+            scoring.</li>
+          <li><strong>K-means clustering</strong> with silhouette-score auto-tuning, TF-IDF keyword extraction, and
+            topic labeling producing structured weekly JSON reports.</li>
+          <li><strong>React 18 dashboard</strong>: executive summary, trending keywords, topic distribution, daily
+            volume charts, and PDF export.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <div class="sec-title">Technical Skills</div>
+      <div class="sk-list">
+        <div class="sk-row">
+          <span class="sk-label">Language</span>
+          <span class="sk-val">Python, Java, SQL</span>
+        </div>
+
+        <div class="sk-row">
+          <span class="sk-label">Framework / Library</span>
+          <span class="sk-val">
+            PyTorch, Scikit-learn, Pandas, NumPy, FastAPI, Spring Boot, React
+          </span>
+        </div>
+
+        <div class="sk-row">
+          <span class="sk-label">Infrastructure</span>
+          <span class="sk-val">
+            PostgreSQL, Redis, Qdrant, Docker, AWS EC2, AWS S3
+          </span>
+        </div>
+
+        <div class="sk-row">
+          <span class="sk-label">Tools</span>
+          <span class="sk-val">
+            Git, GitHub Actions, Docker Compose
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <div class="sec-title">Certifications</div>
+      <div class="entry">
+        <div class="e-head">
+          <div class="e-org">TOEIC - Test of English for International Communication</div>
+        </div>
+        <ul class="e-bullets">
+          <li>Reading: <strong>400 / 495</strong></li>
+          <li>Listening: <strong>395 / 495</strong></li>
+          <li>Writing: <strong>160 / 200</strong></li>
+          <li>Speaking: <strong>140 / 200</strong></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 </html>
