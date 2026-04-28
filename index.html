@@ -13,8 +13,8 @@
       --ink: #0f0f0f;
       --rule: #aaa;
       --soft: #f5f5f5;
-      --muted: #555;
-      --light: #888;
+      --muted: #333;
+      --light: #666;
       --border: #ddd;
       --accent: #1a1a1a;
     }
@@ -68,15 +68,15 @@
       width: 760px;
       background: white;
       box-shadow: 0 4px 32px rgba(0, 0, 0, 0.22);
-      padding: 52px 56px 56px;
+      padding: 44px 56px 48px;
     }
 
     /* HEADER */
     .hdr {
       text-align: center;
       border-bottom: 2px solid #0f0f0f;
-      padding-bottom: 18px;
-      margin-bottom: 18px;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
     }
 
     .hdr-name {
@@ -114,13 +114,9 @@
       color: #000;
     }
 
-    .sep {
-      color: #ccc;
-    }
-
     /* SECTION */
     .section {
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .sec-title {
@@ -132,21 +128,21 @@
       letter-spacing: 0.15em;
       border-bottom: 1px solid #0f0f0f;
       padding-bottom: 3px;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     /* SUMMARY */
     .summary-text {
       font-family: 'EB Garamond', serif;
       font-size: 13px;
-      line-height: 1.75;
+      line-height: 1.7;
       color: var(--ink);
       text-align: justify;
     }
 
     /* EDUCATION */
     .entry {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .e-head {
@@ -176,7 +172,7 @@
       font-size: 11.5px;
       color: #444;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .e-bullets {
@@ -184,13 +180,13 @@
       padding-left: 0;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
     }
 
     .e-bullets li {
       font-size: 11.5px;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.55;
       padding-left: 14px;
       position: relative;
     }
@@ -224,7 +220,7 @@
 
     /* PROJECTS */
     .proj {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .proj:last-child {
@@ -246,14 +242,19 @@
       color: var(--ink);
     }
 
+    .p-links {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
     .p-link {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
+      font-size: 9px;
       color: var(--muted);
       text-decoration: none;
       border-bottom: 1px solid var(--border);
       white-space: nowrap;
-      flex-shrink: 0;
       transition: color 0.15s;
     }
 
@@ -264,13 +265,12 @@
 
     .p-sub {
       font-size: 11px;
-      color: #444;
-      font-weight: 600;
-      margin-bottom: 4px;
+      color: var(--light);
+      margin-bottom: 3px;
     }
 
     .p-stack {
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--muted);
       margin-bottom: 4px;
     }
@@ -282,16 +282,16 @@
 
     .p-bullets {
       list-style: none;
+      padding-left: 0;
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      margin-bottom: 5px;
+      gap: 1px;
     }
 
     .p-bullets li {
       font-size: 11.5px;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.55;
       padding-left: 14px;
       position: relative;
     }
@@ -310,25 +310,24 @@
       font-weight: 600;
     }
 
-    /* PERSONAL INFO */
+    /* INFO GRID */
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4px 32px;
+      gap: 2px 24px;
     }
 
     .info-row {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       font-size: 11.5px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .info-label {
       font-weight: 600;
       color: var(--ink);
-      white-space: nowrap;
-      min-width: 72px;
+      min-width: 56px;
       flex-shrink: 0;
     }
 
@@ -345,47 +344,11 @@
       color: #000;
     }
 
-    /* TOEIC */
-    .toeic-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 2px;
-    }
-
-    .toeic-cell {
-      background: var(--soft);
-      border: 1px solid var(--border);
-      padding: 5px 14px;
-      text-align: center;
-    }
-
-    .tc-label {
-      font-size: 9px;
-      font-weight: 600;
-      color: var(--light);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    .tc-val {
-      font-family: 'EB Garamond', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #0f0f0f;
-      line-height: 1.1;
-    }
-
-    .tc-max {
-      font-size: 9px;
-      color: var(--light);
-    }
-
     /* SKILLS */
     .sk-list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
     }
 
     .sk-row {
@@ -410,24 +373,72 @@
     .proj-rule {
       border: none;
       border-top: 1px solid var(--border);
-      margin: 10px 0;
+      margin: 9px 0;
+    }
+
+    /* CERTIFICATIONS */
+    .cert-row {
+      display: flex;
+      gap: 20px;
+      font-size: 11.5px;
+      color: #333;
+    }
+
+    .cert-item {
+      display: flex;
+      gap: 5px;
+      align-items: baseline;
+    }
+
+    .cert-label {
+      color: var(--light);
+    }
+
+    .cert-score {
+      font-weight: 600;
+      color: var(--ink);
     }
 
     @media print {
       body {
         background: white;
         padding: 0;
+        display: block;
       }
 
       .page {
         box-shadow: none;
-        width: 100%;
-        padding: 40px 50px;
+        width: 210mm;
+        min-height: 0;
+        padding: 14mm 16mm 14mm;
+        font-size: 11px;
       }
 
       .export-bar {
         display: none;
       }
+
+      .hdr {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      .hdr-name { font-size: 28px; }
+      .hdr-role { font-size: 13px; margin-bottom: 7px; }
+
+      .section { margin-bottom: 10px; }
+      .sec-title { margin-bottom: 7px; }
+
+      .summary-text { font-size: 12px; line-height: 1.6; }
+
+      .proj { margin-bottom: 8px; }
+      .proj-rule { margin: 7px 0; }
+
+      .p-bullets li, .e-bullets li { font-size: 11px; line-height: 1.5; }
+      .p-stack { font-size: 10px; }
+      .p-sub { font-size: 10px; }
+
+      .sk-row { font-size: 11px; }
 
       @page {
         size: A4;
@@ -453,24 +464,17 @@
     <!-- HEADER -->
     <div class="hdr">
       <div class="hdr-name">Tran Quang Minh</div>
-      <div class="hdr-role">AI / ML Engineer &nbsp; Year 3 Student &nbsp; Open to Internship</div>
-    </div>
-
-    <!-- PERSONAL INFORMATION -->
-    <div class="section">
-      <div class="sec-title">Personal Information</div>
-      <div class="info-grid">
-        <div class="info-row"><span class="info-label">Phone</span><span class="info-val"><a href="tel:+84985324912">098
-              532 4912</a></span></div>
-        <div class="info-row"><span class="info-label">GitHub</span><span class="info-val"><a
-              href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span></div>
-        <div class="info-row"><span class="info-label">Email</span><span class="info-val"><a
-              href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span></div>
-        <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val"><a
-              href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/"
-              target="_blank">linkedin.com/in/minh-tran-quang</a></span></div>
-        <div class="info-row"><span class="info-label">Location</span><span class="info-val">Ho Chi Minh City,
-            Vietnam</span></div>
+      <div class="hdr-role">AI / ML Engineer &nbsp;·&nbsp; Year 3 Student &nbsp;·&nbsp; Open to Internship</div>
+      <div class="hdr-contact">
+        <span><a href="tel:+84985324912">098 532 4912</a></span>
+        <span>·</span>
+        <span><a href="mailto:minh01212929979@gmail.com">minh01212929979@gmail.com</a></span>
+        <span>·</span>
+        <span><a href="https://github.com/Minh1billion" target="_blank">github.com/Minh1billion</a></span>
+        <span>·</span>
+        <span><a href="https://www.linkedin.com/in/minh-tran-quang-bb4433377/" target="_blank">LinkedIn</a></span>
+        <span>·</span>
+        <span>Ho Chi Minh City, Vietnam</span>
       </div>
     </div>
 
@@ -478,7 +482,7 @@
     <div class="section">
       <div class="sec-title">Profile</div>
       <p class="summary-text">
-        Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems including
+        Third-year Software Engineering student at HCMUTE with hands-on experience building AI-powered systems -
         LLM-integrated pipelines, vector search, NLP preprocessing, and ML model serving. Shipped multiple end-to-end
         projects combining backend engineering with applied AI (RAG, semantic similarity, clustering, EDA automation).
         Seeking an AI Engineer internship to contribute to production-grade ML systems within a professional team.
@@ -490,15 +494,12 @@
       <div class="sec-title">Education</div>
       <div class="entry">
         <div class="e-head">
-          <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 /
-              4.0</span></div>
-          <div class="e-date">September 2023 - Present</div>
+          <div class="e-org">Ho Chi Minh City University of Technology and Education <span class="gpa-inline">GPA 3.2 / 4.0</span></div>
+          <div class="e-date">Sep 2023 – Present</div>
         </div>
-        <div class="e-sub">Bachelor of Engineering - Information Technology - Major: Software Engineering</div>
+        <div class="e-sub">B.Eng. Information Technology · Major: Software Engineering</div>
         <ul class="e-bullets">
-          <li>Academic score: <strong>7.85 / 10</strong></li>
-          <li>Served as <strong>team leader</strong> in Web Programming, Software Engineering, Machine Learning, and
-            Digital Image Processing courses.</li>
+          <li>Academic score <strong>7.85 / 10</strong>; team leader in Web Programming, Software Engineering, Machine Learning, and Digital Image Processing courses.</li>
         </ul>
       </div>
     </div>
@@ -511,71 +512,70 @@
       <div class="proj">
         <div class="p-head">
           <div class="p-title">DALreaDone - AI Data Analytics Platform</div>
-          <a class="p-link" href="https://github.com/Minh1billion/dalreadone"
-            target="_blank">github.com/Minh1billion/dalreadone</a>
+          <div class="p-links">
+            <a class="p-link" href="https://github.com/Minh1billion/dalreadone" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="p-sub">Personal Project &nbsp; Full-stack, LLM, Background Task Processing</div>
-        <div class="p-stack"><span>Stack:</span> FastAPI, React, TypeScript, PostgreSQL, Redis, AWS S3, Groq API, LLaMA
-          3.3-70b, Docker Compose</div>
+        <div class="p-stack"><span>Stack:</span> FastAPI · React · TypeScript · PostgreSQL · Redis · AWS S3 · Groq (LLaMA 3.3-70b) · Docker</div>
         <ul class="p-bullets">
-          <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlation,
-            quality scoring) running as background task with live progress polling.</li>
-          <li><strong>LLM review pass</strong> (Groq LLaMA 3.3-70b) returns structured JSON: domain inference,
-            severity-tagged issues, semantic type detection, and keep/drop candidates.</li>
-          <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops (imputation,
-            encoding, scaling, feature engineering); datasets saved to AWS S3.</li>
-          <li>Live <strong>LLM cost tracking via SSE</strong> (token counts, USD cost, latency); auth via JWT, httpOnly
-            cookie, OAuth2 (Google, GitHub); task state in Redis.</li>
+          <li>Automated <strong>8-step EDA pipeline</strong> (schema profiling, missing-value analysis, correlations, quality scoring) running as a background task with live progress polling.</li>
+          <li><strong>LLM review pass</strong> returns structured JSON: domain inference, severity-tagged issues, semantic type detection, and keep/drop recommendations.</li>
+          <li><strong>Strategy-based preprocessing pipeline</strong> with composable fit/transform ops; live <strong>LLM cost tracking via SSE</strong>; JWT + OAuth2 auth (Google, GitHub); files on AWS S3.</li>
         </ul>
       </div>
       <hr class="proj-rule" />
 
-      <!-- Minesweeper Hybrid RL Agent -->
+      <!-- Minesweeper -->
       <div class="proj">
         <div class="p-head">
-          <div class="p-title">Minesweeper Hybrid RL Agent - 40% Win Rate Solver</div>
-          <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent"
-            target="_blank">github.com/Minh1billion/minesweeper-hybrid-RL-agent</a>
+          <div class="p-title">Minesweeper Hybrid RL Agent - 40% Win-Rate Solver</div>
+          <div class="p-links">
+            <a class="p-link" href="https://github.com/Minh1billion/minesweeper-hybrid-RL-agent" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="p-sub">Personal Project &nbsp; Reinforcement Learning, Constraint Reasoning</div>
-        <div class="p-stack"><span>Stack:</span> Python, NumPy, Pygame</div>
+        <div class="p-stack"><span>Stack:</span> Python · NumPy · Pygame</div>
         <ul class="p-bullets">
-          <li>Hybrid AI agent with a <strong>4-layer decision pipeline</strong> (constraint solver → probability filter
-            → Q-table → random fallback), achieving ~<strong>40% all-time win rate</strong> (~55% rolling) on a 10×10
-            board with 15 mines after 50,000 training episodes.</li>
-          <li><strong>Constraint solver</strong> handles ~87% of decisions deterministically; probability filter
-            estimates P(mine | cell) from neighboring number cells for high-confidence guesses (~7%); Q-table intervenes
-            only in genuinely ambiguous cases (~5%).</li>
-          <li><strong>Local 5×5 state window</strong> keeps the Q-table feasible at 1.83M states; frontier-only
-            evaluation focuses learning on boundary cells; custom training loop (no Gym) with real-time pygame debug UI
-            and per-step decision source tracking.</li>
+          <li><strong>4-layer decision hierarchy</strong> (constraint solver -> probability filter -> Q-table -> random fallback); ~<strong>40% all-time win rate</strong> (~55% rolling) on 10×10 / 15 mines after 50k episodes.</li>
+          <li>Constraint solver handles <strong>~87% of moves deterministically</strong>; probability filter covers ~7% (P(mine|cell) threshold); Q-table intervenes only in genuinely ambiguous cases (~5%).</li>
+          <li><strong>1.83M Q-states</strong> via local 5×5 window + frontier-only evaluation; custom training loop; real-time pygame debug UI with Q-value and decision-source inspection.</li>
         </ul>
       </div>
-
       <hr class="proj-rule" />
 
       <!-- News Gathering Assistant -->
       <div class="proj">
         <div class="p-head">
           <div class="p-title">News Gathering Assistant - Vietnamese Tech News Intelligence</div>
-          <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant"
-            target="_blank">github.com/Minh1billion/news-gathering-assistant</a>
+          <div class="p-links">
+            <a class="p-link" href="https://github.com/Minh1billion/news-gathering-assistant" target="_blank">GitHub</a>
+          </div>
         </div>
-        <div class="p-sub">Technical Assessment Project &nbsp; Full-stack, NLP, Data Pipeline</div>
-        <div class="p-stack"><span>Stack:</span> Python 3.11, FastAPI, React 18, Sentence-Transformers, Qdrant,
-          PostgreSQL, scikit-learn, Docker Compose</div>
+        <div class="p-stack"><span>Stack:</span> Python · FastAPI · React 18 · Sentence-Transformers · Qdrant · PostgreSQL · scikit-learn · Docker</div>
         <ul class="p-bullets">
-          <li>End-to-end pipeline crawling Vietnamese tech news from <strong>4 sources</strong> (VNExpress, ThanhNien,
-            TuoiTre, ZingNews) via HTML scraping and RSS, aggregating <strong>100+ articles per run</strong> into
-            PostgreSQL.</li>
-          <li><strong>Vietnamese SBERT embeddings</strong> stored in Qdrant for semantic deduplication and relevance
-            scoring.</li>
-          <li><strong>K-means clustering</strong> with silhouette-score auto-tuning, TF-IDF keyword extraction, and
-            topic labeling producing structured weekly JSON reports.</li>
-          <li><strong>React 18 dashboard</strong>: executive summary, trending keywords, topic distribution, daily
-            volume charts, and PDF export.</li>
+          <li>Crawls <strong>11 Vietnamese tech sources</strong> via HTML scraping + RSS, ingesting 200–300 articles per run into PostgreSQL with <strong>Vietnamese SBERT</strong> embeddings in Qdrant for semantic deduplication.</li>
+          <li><strong>K-means clustering</strong> (silhouette-score auto-tuning) + TF-IDF keyword extraction -> structured weekly JSON report; React 18 dashboard with trending keywords, topic charts, and PDF export.</li>
         </ul>
       </div>
+      <hr class="proj-rule" />
+
+      <!-- DataPill -->
+      <div class="proj">
+        <div class="p-head">
+          <div class="p-title">DataPill - Modular Data Pipeline CLI &nbsp;</div>
+          <div class="p-links">
+            <a class="p-link" href="https://github.com/Minh1billion/datapill" target="_blank">GitHub</a>
+            <a class="p-link" href="https://pypi.org/project/datapill" target="_blank">PyPI</a>
+            <a class="p-link" href="https://minh1billion.github.io/datapill" target="_blank">Docs</a>
+          </div>
+        </div>
+        <div class="p-stack"><span>Stack:</span> Python · Polars · PyArrow · Typer · Docker</div>
+        <ul class="p-bullets">
+          <li>PUBLISHED ON PyPI</li>
+          <li>End-to-end CLI for reproducible data pipelines: <strong>ingest -> profile -> classify -> preprocess -> export</strong>; multi-source ingestion (local files, PostgreSQL, MySQL, S3, Kafka, REST APIs).</li>
+          <li><strong>Hybrid column classifier</strong> (rule-based + sentence-transformers); config-driven preprocessing (imputation, scaling, encoding, outlier clipping) with dry-run + checkpoint support; versioned Parquet artifact system per run.</li>
+        </ul>
+      </div>
+
     </div>
 
     <!-- SKILLS -->
@@ -586,26 +586,17 @@
           <span class="sk-label">Language</span>
           <span class="sk-val">Python, Java, SQL</span>
         </div>
-
         <div class="sk-row">
-          <span class="sk-label">Framework / Library</span>
-          <span class="sk-val">
-            PyTorch, Scikit-learn, Pandas, NumPy, FastAPI, Spring Boot, React
-          </span>
+          <span class="sk-label">Frameworks</span>
+          <span class="sk-val">PyTorch, scikit-learn, Pandas, NumPy, FastAPI, Spring Boot, React, LangChain, HuggingFace</span>
         </div>
-
         <div class="sk-row">
           <span class="sk-label">Infrastructure</span>
-          <span class="sk-val">
-            PostgreSQL, Redis, Qdrant, Docker, AWS EC2, AWS S3
-          </span>
+          <span class="sk-val">PostgreSQL, Redis, Qdrant, Docker, AWS EC2, AWS S3</span>
         </div>
-
         <div class="sk-row">
           <span class="sk-label">Tools</span>
-          <span class="sk-val">
-            Git, GitHub Actions, Docker Compose
-          </span>
+          <span class="sk-val">Git, GitHub Actions, Docker Compose</span>
         </div>
       </div>
     </div>
@@ -614,15 +605,13 @@
     <div class="section">
       <div class="sec-title">Certifications</div>
       <div class="entry">
-        <div class="e-head">
-          <div class="e-org">TOEIC - Test of English for International Communication</div>
+        <div class="e-sub" style="margin-bottom:4px;">TOEIC - Test of English for International Communication</div>
+        <div class="cert-row">
+          <div class="cert-item"><span class="cert-label">Reading</span><span class="cert-score">400 / 495</span></div>
+          <div class="cert-item"><span class="cert-label">Listening</span><span class="cert-score">395 / 495</span></div>
+          <div class="cert-item"><span class="cert-label">Writing</span><span class="cert-score">160 / 200</span></div>
+          <div class="cert-item"><span class="cert-label">Speaking</span><span class="cert-score">140 / 200</span></div>
         </div>
-        <ul class="e-bullets">
-          <li>Reading: <strong>400 / 495</strong></li>
-          <li>Listening: <strong>395 / 495</strong></li>
-          <li>Writing: <strong>160 / 200</strong></li>
-          <li>Speaking: <strong>140 / 200</strong></li>
-        </ul>
       </div>
     </div>
 
